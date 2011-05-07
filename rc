@@ -6,12 +6,13 @@ if command_exists mvim ; then
   export EDITOR=mvim
   export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
   export MANPAGER="col -b | mview -c 'set ft=man nomod nolist' -"
-  alias vi=mvim
 elif command_exists vim ; then
   export EDITOR=vim
 elif command_exists vi ; then
   export EDITOR=vi
 fi
+
+alias v=$EDITOR
 
 if [ -r ~/.oh-my-zsh ] ; then
   # Path to your oh-my-zsh configuration.
