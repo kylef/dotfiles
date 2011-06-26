@@ -13,6 +13,8 @@ elif command_exists vi ; then
 fi
 
 alias v=$EDITOR
+alias gdiff='git diff | $EDITOR -R -'
+alias grev='git rev'
 
 if [ -r ~/.oh-my-zsh ] ; then
   # Path to your oh-my-zsh configuration.
