@@ -14,6 +14,12 @@ elif command_exists vi ; then
   export EDITOR=vi
 fi
 
+pycd () {
+  # cd into a python module directory
+  # django.contrib.admin > $PYTHONPATH/django/contrib/admin
+  cd $(python -c "import $1; print $1.__file__" | xargs dirname)
+}
+
 alias v=$EDITOR
 alias gdiff='git diff | $EDITOR -R -'
 alias grev='git rev'
