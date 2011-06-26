@@ -1,5 +1,7 @@
+# vim: set syntax=sh ts=2 sw=2 et:
+
 command_exists () {
-    type "$1" &> /dev/null ;
+  type "$1" &> /dev/null;
 }
 
 if command_exists mvim ; then
