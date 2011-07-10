@@ -24,6 +24,8 @@ alias v=$EDITOR
 alias gdiff='git diff | $EDITOR -R -'
 alias grev='git rev'
 
+alias reload='source ~/.env/rc'
+
 if [ -r ~/.oh-my-zsh ] ; then
   # Path to your oh-my-zsh configuration.
   export ZSH=$HOME/.oh-my-zsh
