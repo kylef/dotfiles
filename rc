@@ -39,8 +39,9 @@ if [ "$SHELL" = "/bin/zsh" ] && [ -s ~/.oh-my-zsh/oh-my-zsh.sh ] ; then
   export ZSH_THEME="jreese"
   export DISABLE_AUTO_UPDATE="true"
 
-  # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-  plugins=(git)
+  plugins=()
+  command_exists git && plugins+=git
+  command_exists brew && plugins+=brew
 
   source $ZSH/oh-my-zsh.sh
 fi
