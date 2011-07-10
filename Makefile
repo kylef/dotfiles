@@ -18,4 +18,7 @@ vim: git-vim
 	install $(DESTDIR)/.vim/templates/vimrc $(DESTDIR)/.vimrc
 	install $(DESTDIR)/.vim/templates/gvimrc  $(DESTDIR)/.gvimrc
 
+git-ssh:
+	test -d $(DESTDIR)/.ssh || git clone https://github.com/kylef/dotssh.git $(DESTDIR)/.ssh
+
 all: zsh vim
