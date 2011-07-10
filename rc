@@ -26,6 +26,13 @@ alias grev='git rev'
 
 alias reload='source ~/.env/rc'
 
+pull () {
+  [[ -d "$HOME/.env/.git" ]] && (cd $HOME/.env && git pull origin master)
+  [[ -d "$HOME/.vim/.git" ]] && (cd $HOME/.vim && git pull origin master)
+  [[ -d "$HOME/.ssh/.git" ]] && (cd $HOME/.ssh && git pull origin master)
+  reload
+}
+
 if [ -r ~/.oh-my-zsh ] ; then
   # Path to your oh-my-zsh configuration.
   export ZSH=$HOME/.oh-my-zsh
