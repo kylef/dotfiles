@@ -24,6 +24,14 @@ alias v=$EDITOR
 alias gdiff='git diff | $EDITOR -R -'
 alias grev='git rev'
 
+ssha() {
+  ssh $1 -t tmux attach
+}
+
+ssht() {
+  ssh $1 -t tmux
+}
+
 alias reload='source ~/.env/rc'
 
 pull () {
