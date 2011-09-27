@@ -51,6 +51,7 @@ if [ "$SHELL" = "/bin/zsh" ] && [ -s ~/.oh-my-zsh/oh-my-zsh.sh ] ; then
   plugins=()
   command_exists git && plugins+=git
   command_exists brew && plugins+=brew
+  command_exists pacman && plugins+=archlinux
 
   source $ZSH/oh-my-zsh.sh
 fi
