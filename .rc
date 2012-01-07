@@ -32,18 +32,8 @@ ssht() {
   ssh $1 -t tmux
 }
 
-alias reload='source ~/.env/rc'
-
 # wg <filename> <url>
 alias wg="wget -O"
-
-pull () {
-  [[ -d "$HOME/.env/.git" ]] && (cd $HOME/.env && git pull origin master)
-  [[ -d "$HOME/.vim/.git" ]] && (cd $HOME/.vim && git pull origin master)
-  [[ -d "$HOME/.ssh/.git" ]] && (cd $HOME/.ssh && git pull origin master)
-  [[ -d "$HOME/.oh-my-zsh" ]] && (cd $HOME/.oh-my-zsh && git pull origin master)
-  reload
-}
 
 if [ "$SHELL" = "/bin/zsh" ] && [ -s ~/.oh-my-zsh/oh-my-zsh.sh ] ; then
   # Path to your oh-my-zsh configuration.
