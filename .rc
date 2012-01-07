@@ -35,6 +35,12 @@ ssht() {
 # wg <filename> <url>
 alias wg="wget -O"
 
+alias sprunge=curl -F 'sprunge=<-' http://sprunge.us
+
+sprungef() {
+  curl -F "sprunge=@$1" http://sprunge.us
+}
+
 if [ "$SHELL" = "/bin/zsh" ] && [ -s ~/.oh-my-zsh/oh-my-zsh.sh ] ; then
   # Path to your oh-my-zsh configuration.
   export ZSH=$HOME/.oh-my-zsh
