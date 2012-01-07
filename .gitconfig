@@ -1,0 +1,9 @@
+[user]
+    name = Kyle Fuller
+    email = inbox@kylefuller.co.uk
+
+[core]
+    excludesfile = ~/.gitignore
+
+[color]
+    ui = auto
