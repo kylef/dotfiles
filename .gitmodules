@@ -1,0 +1,3 @@
+[submodule ".vim/bundle/topfunky-light/colors"]
+	path = .vim/bundle/topfunky-light/colors
+	url = git://gist.github.com/424448.git
