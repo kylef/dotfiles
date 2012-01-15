@@ -35,7 +35,7 @@ ssht() {
 # wg <filename> <url>
 alias wg="wget -O"
 
-alias sprunge=curl -F 'sprunge=<-' http://sprunge.us
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 sprungef() {
   curl -F "sprunge=@$1" http://sprunge.us
