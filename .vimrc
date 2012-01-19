@@ -48,3 +48,12 @@ set expandtab " Expand tabs into spaces
 autocmd FileType cpp set noexpandtab
 
 set mouse=a
+
+" Paste
+command! Pa :w !curl -F 'paste=<-' http://stormy-warrior-8889.herokuapp.com
+
+" Wordcount
+command! Wc :w !wc
+
+" Restructured text to pdf then open the pdf
+command! Rp :!rst2pdf % && open %:r.pdf
