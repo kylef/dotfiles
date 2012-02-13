@@ -13,3 +13,5 @@ if [ -s ~/.oh-my-zsh/oh-my-zsh.sh ] ; then
 
   source $ZSH/oh-my-zsh.sh
 fi
+
+[[ -s "$HOME/.autoenv/activate.sh" ]] && source "$HOME/.autoenv/activate.sh"
