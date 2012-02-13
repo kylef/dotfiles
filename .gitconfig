@@ -7,3 +7,8 @@
 
 [color]
     ui = auto
+
+[alias]
+    up = pull --rebase
+    wip = commit -m 'wip'
+
