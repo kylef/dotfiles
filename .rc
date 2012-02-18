@@ -35,10 +35,10 @@ ssht() {
 # wg <filename> <url>
 alias wg="wget -O"
 
-alias snip="curl -F 'paste=<-' http://s.herokuapp.com"
+alias snip="curl -F 'paste=<-' http://snippt.herokuapp.com"
 
 sprungef() {
-  curl -F "paste=@$1" http://s.herokuapp.com
+  curl -F "paste=@$1" http://snippt.herokuapp.com
 }
 
 alias gsnip='git diff | snip'
