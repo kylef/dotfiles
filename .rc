@@ -4,15 +4,7 @@ command_exists () {
   type "$1" &> /dev/null;
 }
 
-if command_exists mvim ; then
-  export EDITOR=mvim
-  export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
-  export MANPAGER="col -b | mview -c 'set ft=man nomod nolist' -"
-elif command_exists vim ; then
-  export EDITOR=vim
-elif command_exists vi ; then
-  export EDITOR=vi
-fi
+export EDITOR=vim
 
 pycd () {
   # cd into a python module directory
