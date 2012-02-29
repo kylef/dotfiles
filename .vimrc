@@ -57,3 +57,5 @@ command! Wc :w !wc
 
 " Restructured text to pdf then open the pdf
 command! Rp :!rst2pdf % && open %:r.pdf
+
+color jellybeans
