@@ -1,9 +1,5 @@
 # vim: set syntax=sh ts=2 sw=2 et:
 
-command_exists () {
-  type "$1" &> /dev/null;
-}
-
 export EDITOR=vim
 
 pycd () {
@@ -40,8 +36,5 @@ gapp() {
 
 # Source a local .profile if it exists
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
-
-# Run RVM if it is installed
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
