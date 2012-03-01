@@ -50,7 +50,7 @@ autocmd FileType cpp set noexpandtab
 set mouse=a
 
 " Paste
-command! Pa :w !curl -F 'paste=<-' http://stormy-warrior-8889.herokuapp.com
+command! Pa :w !curl -F 'paste=<-' http://snippt.herokuapp.com
 
 " Wordcount
 command! Wc :w !wc
