@@ -23,6 +23,8 @@ set showcmd
 set showmode " Show the mode in use
 
 set wrap " Turn on line wrapping
+set textwidth=79
+set colorcolumn=80
 set scrolloff=2 " Show 2 lines around the cursor (when scrolling off the page)
 
 set title " Set the terminal title
