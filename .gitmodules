@@ -3,7 +3,7 @@
 	url = git://gist.github.com/424448.git
 [submodule ".autoenv"]
 	path = .autoenv
-	url = git://github.com/kennethreitz/autoenv.git
+	url = https://github.com/kennethreitz/autoenv.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
