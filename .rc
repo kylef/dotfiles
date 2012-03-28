@@ -8,9 +8,16 @@ pycd () {
   cd $(python -c "import $1; print $1.__file__" | xargs dirname)
 }
 
+json () {
+  if [ -p /dev/stdin ]; then
+    python -mjson.tool | pygmentize -l javascript
+  else
+    python -mjson.tool <<< "$*" | pygmentize -l javascript
+  fi
+}
+
 alias v=$EDITOR
 alias gdiff='git diff | $EDITOR -R -'
-alias grev='git rev'
 
 ssha() {
   ssh $1 -t tmux attach
@@ -33,6 +40,8 @@ alias gsnip='git diff | snip'
 gapp() {
   curl $1 | git apply
 }
+
+alias mac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'"
 
 # Source a local .profile if it exists
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
