@@ -61,3 +61,12 @@ command! Wc :w !wc
 command! Rp :!rst2pdf % && open %:r.pdf
 
 color jellybeans
+
+" autocmd BufWritePre * :%s/\s\+$//e
+
+" Yeah... these get typoed
+command W w
+command Q q
+command Wq wq
+command WQ wq 
+
