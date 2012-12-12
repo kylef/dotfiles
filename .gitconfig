@@ -3,7 +3,7 @@
     email = inbox@kylefuller.co.uk
 
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore_global
 
 [color]
     ui = auto
