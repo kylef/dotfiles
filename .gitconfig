@@ -12,5 +12,6 @@
     up = pull --rebase
     wip = commit -m 'wip'
     rev = rev-parse HEAD
+    s = status -s
     l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
