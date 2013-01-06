@@ -30,7 +30,7 @@ ssht() {
 # wg <filename> <url>
 alias wg="wget -O"
 
-alias snip="curl -F 'paste=<-' http://snippt.herokuapp.com"
+alias snip="curl -F 'paste=<-' http://s.drk.sc"
 
 sprungef() {
   curl -F "paste=@$1" http://snippt.herokuapp.com
