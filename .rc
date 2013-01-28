@@ -47,3 +47,8 @@ alias mac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'"
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
+
+version() {
+    COMMITS=$(git rev-list HEAD | wc -l)
+    echo "$(git describe --tags --always --dirty) ($((COMMITS)))"
+}
