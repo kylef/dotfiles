@@ -48,6 +48,11 @@ set tabstop=4 " Use 4 spaces to a tab
 set shiftwidth=4 " As above
 set expandtab " Expand tabs into spaces
 autocmd FileType cpp set noexpandtab
+set showbreak=↪
+
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,trail:▝,eol:¬
+set list
 
 set mouse=a
 
