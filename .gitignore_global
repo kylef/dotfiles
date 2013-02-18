@@ -15,3 +15,6 @@ Session.vim
 .Spotlight-V100
 .Trashes
 
+Pods/
+Podfile.lock
+
