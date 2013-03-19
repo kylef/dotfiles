@@ -53,3 +53,8 @@ version() {
     COMMITS=$(git rev-list HEAD | wc -l)
     echo "$(git describe --tags --always --dirty) ($((COMMITS)))"
 }
+
+changelog() {
+    git shortlog --no-merges $1..master | pbcopy
+    echo "Release notes for $(version) are in your clipboard"
+}
