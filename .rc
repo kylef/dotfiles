@@ -55,6 +55,7 @@ version() {
 }
 
 changelog() {
-    git shortlog --no-merges $1..master | pbcopy
-    echo "Release notes for $(version) are in your clipboard"
+    git shortlog --no-merges $1..HEAD | pbcopy
+    changes=$(git rev-list $1..HEAD | wc -l)
+    echo "Release notes for $(version) are in your clipboard, $((changes)) changes"
 }
