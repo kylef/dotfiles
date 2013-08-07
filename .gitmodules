@@ -16,3 +16,9 @@
 [submodule ".vim/bundle/flake8"]
 	path = .vim/bundle/flake8
 	url = https://github.com/nvie/vim-flake8.git
+[submodule ".vim/bundle/taskpaper"]
+	path = .vim/bundle/taskpaper
+	url = https://github.com/davidoc/taskpaper.vim
+[submodule ".vim/bundle/gist"]
+	path = .vim/bundle/gist
+	url = https://github.com/mattn/gist-vim
