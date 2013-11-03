@@ -16,6 +16,20 @@ json () {
   fi
 }
 
+openx () {
+  # http://orta.github.io/rebase/on/opening-xcode-projects-and-workspaces/
+
+  if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"; then
+    open *.xcworkspace
+  else
+    if test -n "$(find . -maxdepth 1 -name '*.xcodeproj' -print -quit)"; then
+      open *.xcodeproj
+    else
+      echo "No Xcode workspace or project found"
+    fi
+  fi
+}
+
 alias v=$EDITOR
 alias gdiff='git diff | $EDITOR -R -'
 
