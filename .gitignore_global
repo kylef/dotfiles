@@ -1,11 +1,9 @@
-## Vim
-
+# Vim
 .*.sw[a-z]
 *.un~
 Session.vim
 
-## OS X
-
+# OS X
 .DS_Store
 
 # Thumbnails
@@ -15,6 +13,9 @@ Session.vim
 .Spotlight-V100
 .Trashes
 
+# Python VirtualEnnv
+venv/
+
+# CocoaPods
 Pods/
-Podfile.lock
 
