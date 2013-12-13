@@ -22,6 +22,9 @@ set ruler " Show cursor position
 set showcmd
 set showmode " Show the mode in use
 
+set hlsearch " Highlight all search matches
+set cursorline " Highlight current line
+
 set wrap " Turn on line wrapping
 set textwidth=79
 set colorcolumn=80
@@ -33,6 +36,12 @@ set visualbell " Disable beeping
 
 set incsearch " Highlight matches as you type
 set hlsearch " Highlight matches
+
+set laststatus=2 " Always show status bar
+
+" Highlight the status bar when in insert mode
+au InsertEnter * hi StatusLine ctermfg=235 ctermbg=10
+au InsertLeave * hi StatusLine ctermfg=15 ctermbg=240
 
 " Searching
 set ignorecase
