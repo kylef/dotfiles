@@ -88,8 +88,7 @@ command! Pa :w !curl -F 'paste=<-' http://s.drk.sc
 " Wordcount
 command! Wc :w !wc
 
-" Restructured text to pdf then open the pdf
-command! Rp :!rst2pdf % && open %:r.pdf
+autocmd FileType rst set makeprg=rst2pdf\ %
 
 color jellybeans
 
