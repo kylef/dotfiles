@@ -1,4 +1,8 @@
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
