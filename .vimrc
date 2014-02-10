@@ -63,6 +63,17 @@ set expandtab " Expand tabs into spaces
 autocmd FileType cpp set noexpandtab
 set showbreak=↪
 
+" Podspecs ------ {{{
+augroup ft_podspec
+  autocmd!
+  autocmd BufNewFile,BufRead,BufWrite *.podspec setlocal filetype=podspec
+  autocmd BufNewFile,BufRead Podfile setlocal filetype=podfile
+  autocmd FileType podspec,podfile set syntax=ruby
+  autocmd FileType podspec set makeprg=pod\ spec\ lint\ %
+  autocmd FileType podfile set makeprg=pod\ install
+augroup END
+" }}}
+
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,trail:▝,eol:¬
 set list
