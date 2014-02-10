@@ -70,3 +70,7 @@ changelog() {
 
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
 
+# Ruby gems
+export GEM_HOME=$HOME/gems
+export PATH=$GEM_HOME/bin:$PATH
+
