@@ -88,3 +88,7 @@ command WQ wq
 let g:gist_clip_command = 'pbcopy'
 let g:gist_post_private = 1
 
+" Syntastic
+
+let g:syntastic_python_flake8_args="--max-complexity 10"
+
