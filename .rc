@@ -2,20 +2,6 @@
 
 export EDITOR=vim
 
-pycd () {
-  # cd into a python module directory
-  # django.contrib.admin > $PYTHONPATH/django/contrib/admin
-  cd $(python -c "import $1; print $1.__file__" | xargs dirname)
-}
-
-json () {
-  if [ -p /dev/stdin ]; then
-    python -mjson.tool | pygmentize -l javascript
-  else
-    python -mjson.tool <<< "$*" | pygmentize -l javascript
-  fi
-}
-
 openx () {
   # http://orta.github.io/rebase/on/opening-xcode-projects-and-workspaces/
 
@@ -30,28 +16,11 @@ openx () {
   fi
 }
 
-alias v=$EDITOR
-alias gdiff='git diff | $EDITOR -R -'
-
-ssha() {
-  ssh $1 -t tmux attach
-}
-
-ssht() {
-  ssh $1 -t tmux
-}
-
 alias snip="curl -F 'paste=<-' http://s.drk.sc"
-alias gsnip='git diff | snip'
-
 alias mac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'"
 alias serve="python -m SimpleHTTPServer"
 
 # git
-
-apply() {
-  curl $1 | git apply
-}
 
 version() {
     COMMITS=$(git rev-list HEAD | wc -l)
@@ -63,7 +32,6 @@ changelog() {
     changes=$(git rev-list $1..HEAD | wc -l)
     echo "Release notes for $(version) are in your clipboard, $((changes)) changes"
 }
-
 
 # Source a local .profile if it exists
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
