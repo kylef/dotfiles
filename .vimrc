@@ -4,6 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle "dag/vim-fish"
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -104,6 +106,9 @@ let g:gist_clip_command = 'pbcopy'
 let g:gist_post_private = 1
 
 " Syntastic
-
 let g:syntastic_python_flake8_args="--max-complexity 10"
+
+if &shell =~# 'fish$'
+  set shell=bash
+endif
 

@@ -1,3 +1,4 @@
+install fish
 install vim
 install tree
 install wget
