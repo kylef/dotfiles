@@ -1,1 +1,1 @@
-source .rc
+.rc

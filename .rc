@@ -1,6 +1,7 @@
 # vim: set syntax=sh ts=2 sw=2 et:
 
 export EDITOR=vim
+export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 openx () {
   # http://orta.github.io/rebase/on/opening-xcode-projects-and-workspaces/
@@ -35,10 +36,4 @@ changelog() {
 
 # Source a local .profile if it exists
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
-
-export PATH=/usr/local/bin:/usr/local/share/python:$PATH
-
-# Ruby gems
-export GEM_HOME=$HOME/gems
-export PATH=$GEM_HOME/bin:$PATH
 
