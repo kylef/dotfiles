@@ -18,4 +18,5 @@
     conflict = "!f() { git status -s | grep ^UU | awk '{print $2}' ; }; vim `f`"
 
 [push]
-	default = matching
+    default = simple
+
