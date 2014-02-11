@@ -1,7 +1,15 @@
 # vim: set syntax=sh ts=2 sw=2 et:
 
+if [[ $0 == "zsh" ]]; then
+  autoload -U colors && colors
+  export PS1="%{$fg[red]%}$ %{$reset_color%}%"
+else
+  export PS1="\e[0;31m$\e[0m "
+fi
+
 export EDITOR=vim
 export LSCOLORS=Gxfxcxdxbxegedabagacad
+alias ls='ls -G'
 
 openx () {
   # http://orta.github.io/rebase/on/opening-xcode-projects-and-workspaces/
