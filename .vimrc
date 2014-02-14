@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle "dag/vim-fish"
+Bundle "scrooloose/syntastic"
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
