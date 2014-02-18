@@ -3,23 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>viewWillDisappear</string>
+	<string>init</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+	<string>- (instancetype)init {
+    if (self = [super init]) {
+        &lt;# code #&gt;
+    }
 
-    &lt;# code #&gt;
-}</string>
+    return self;
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D745A6A1-85CC-4834-AFCD-755204C1685D</string>
+	<string>178F3F27-4F7A-46C5-94B5-576A938C7D13</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>View will disappear</string>
+	<string>init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

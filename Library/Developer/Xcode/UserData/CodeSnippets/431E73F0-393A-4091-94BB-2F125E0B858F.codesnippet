@@ -3,23 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>viewWillDisappear</string>
+	<string>coding</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+	<string>#pragma mark - NSSecureCoding
 
-    &lt;# code #&gt;
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super init]) {
+        &lt;# decoding #&gt;
+    }
+
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    &lt;# encoding #&gt;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D745A6A1-85CC-4834-AFCD-755204C1685D</string>
+	<string>431E73F0-393A-4091-94BB-2F125E0B858F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>View will disappear</string>
+	<string>NSSecureCoding</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

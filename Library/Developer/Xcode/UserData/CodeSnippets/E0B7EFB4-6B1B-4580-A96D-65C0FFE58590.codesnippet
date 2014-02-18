@@ -3,26 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>viewWillDisappear</string>
+	<string>equality</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+	<string>#pragma mark - Equality
 
-    &lt;# code #&gt;
-}</string>
+- (BOOL)isEqual:(id)object {
+    return (self == object) || ([object isKindOfClass:[self class]] &amp;&amp; [self isEqualTo&lt;# objectType #&gt;:object]);
+}
+
+- (BOOL)isEqualTo&lt;# objectType #&gt;:(&lt;# class #&gt; *)object {
+    return &lt;# test equality #&gt;;
+}
+
+- (NSUInteger)hash {
+    return &lt;# hash #&gt;;
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D745A6A1-85CC-4834-AFCD-755204C1685D</string>
+	<string>E0B7EFB4-6B1B-4580-A96D-65C0FFE58590</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>View will disappear</string>
+	<string>Equality</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
