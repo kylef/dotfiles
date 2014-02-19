@@ -64,6 +64,7 @@ set tabstop=4 " Use 4 spaces to a tab
 set shiftwidth=4 " As above
 set expandtab " Expand tabs into spaces
 autocmd FileType cpp set noexpandtab
+autocmd FileType gitcommit setlocal spell textwidth=72
 set showbreak=↪
 
 " Podspecs ------ {{{
