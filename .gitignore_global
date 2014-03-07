@@ -16,6 +16,7 @@ Session.vim
 # Python VirtualEnnv
 venv/
 
-# CocoaPods
-Pods/
+# Xcode
+*.xcuserdatad
+xcshareddata
 
