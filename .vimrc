@@ -6,6 +6,7 @@ call vundle#rc()
 
 Bundle "dag/vim-fish"
 Bundle "scrooloose/syntastic"
+Bundle "kylef/apiblueprint.vim"
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
