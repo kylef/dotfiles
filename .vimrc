@@ -3,13 +3,14 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'Keithbsmiley/swift.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
+Plug 'kien/ctrlp.vim'
 Plug 'kylef/apiblueprint.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/syntastic'
-Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
