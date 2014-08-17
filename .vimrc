@@ -9,6 +9,7 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/syntastic'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
@@ -97,6 +98,8 @@ autocmd FileType rst set makeprg=rst2pdf\ %
 color jellybeans
 
 " autocmd BufWritePre * :%s/\s\+$//e
+
+set wildignore+=*/venv/*
 
 " Yeah... these get typoed
 command W w
