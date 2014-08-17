@@ -1,16 +1,16 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/plugged')
 
-Bundle "dag/vim-fish"
-Bundle "scrooloose/syntastic"
-Bundle "kylef/apiblueprint.vim"
-Bundle "airblade/vim-gitgutter"
+Plug 'airblade/vim-gitgutter'
+Plug 'dag/vim-fish'
+Plug 'kylef/apiblueprint.vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'nvie/vim-flake8'
+Plug 'scrooloose/syntastic'
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call plug#end()
 
 syntax enable " Syntax highlighting
 filetype plugin indent on " File type detection
