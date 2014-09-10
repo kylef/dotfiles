@@ -18,5 +18,5 @@ venv/
 
 # Xcode
 *.xcuserdatad
-xcshareddata
+*.xccheckout
 
