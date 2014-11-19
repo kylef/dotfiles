@@ -1,4 +1,4 @@
-all: python-packages ruby-packages
+all: homebrew homebrew-packages python-packages ruby-packages
 
 osx: homebrew homebrew-packages
 
