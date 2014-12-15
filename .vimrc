@@ -11,26 +11,16 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-sensible'
 
 call plug#end()
 
-syntax enable " Syntax highlighting
-filetype plugin indent on " File type detection
-
-set backspace=indent,eol,start
-
 set hidden " Handle multiple buffers better
-
-" Tab completion
-set wildmenu
-set wildmode=list:longest
 
 " Interface
 
 set number " Show line numbers
-set ruler " Show cursor position
 
-set showcmd
 set showmode " Show the mode in use
 
 set hlsearch " Highlight all search matches
