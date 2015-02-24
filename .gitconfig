@@ -1,6 +1,6 @@
 [user]
     name = Kyle Fuller
-    email = inbox@kylefuller.co.uk
+    email = kyle@fuller.li
 
 [core]
     excludesfile = ~/.gitignore_global
