@@ -60,7 +60,7 @@ set expandtab " Expand tabs into spaces
 set showbreak=↪
 
 " Completion
-set complete=.,w,b,u,t,i,kspell
+set complete=.,w,b,u,t,i
 set completeopt=menu
 set wildmenu                                           " Better completion in the CLI
 set wildmode=longest:full,full                         " Completion settings
