@@ -1,17 +1,25 @@
-all: homebrew homebrew-packages python-packages ruby-packages
+PIP=PIP_REQUIRE_VIRTUALENV=false pip
 
-osx: homebrew homebrew-packages
+all: osx python-packages
+osx: homebrew-packages
 
-homebrew:
-	ruby -e '$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)'
+/usr/local/bin/brew:
+	@echo Installing Homebrew
+	@ruby -e "`curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install`"
 
-homebrew-packages:
-	brew bundle Brewfile
+/usr/local/Library/Taps/homebrew/homebrew-bundle: /usr/local/bin/brew
+	brew tap Homebrew/bundle
 
-python-packages:
-	pip install -r requirements.txt
+.PHONY: homebrew-packages
+homebrew-packages: /usr/local/Library/Taps/homebrew/homebrew-bundle
+	brew bundle
 
-ruby-packages:
-	gem install bundle
-	bundle install
+.PHONY: python-packages
+python-packages: /usr/local/bin/virtualenv /usr/local/bin/rfc
+
+/usr/local/bin/virtualenv:
+	$(PIP) install virtualenv
+
+/usr/local/bin/rfc:
+	$(PIP) install rfc
 

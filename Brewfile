@@ -20,7 +20,6 @@ brew 'vimpager'
 brew 'weechat'
 brew 'wget'
 
-case 'dropbox'
-cask 'flux'
+cask 'dropbox'
 cask 'iterm2-beta'
 cask 'xscreensaver'
