@@ -12,6 +12,7 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-sensible'
 
 call plug#end()
@@ -19,33 +20,32 @@ call plug#end()
 set hidden " Handle multiple buffers better
 
 " Interface
-
+color jellybeans
 set number " Show line numbers
-
 set showmode " Show the mode in use
-
-set hlsearch " Highlight all search matches
 set cursorline " Highlight current line
-
 set wrap " Turn on line wrapping
-set textwidth=79
-set colorcolumn=80
-set scrolloff=2 " Show 2 lines around the cursor (when scrolling off the page)
-
+"set textwidth=79 " Force wrap at 79 characters
+set colorcolumn=80 " Show a column at 80
 set title " Set the terminal title
-
 set visualbell " Disable beeping
+set mouse=a
+set shortmess=Ia " Disable start up message and abbreviate items
 
-set incsearch " Highlight matches as you type
-set hlsearch " Highlight matches
+" Show indication of newlines and trailing spaces
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,trail:▝
+set list
 
+" Status Bar
 set laststatus=2 " Always show status bar
-
 " Highlight the status bar when in insert mode
 au InsertEnter * hi StatusLine ctermfg=235 ctermbg=10
 au InsertLeave * hi StatusLine ctermfg=15 ctermbg=240
 
-" Searching
+" Search
+set hlsearch " Highlight all search matches
+set incsearch " Highlight matches as you type
 set ignorecase
 set smartcase " Be case-sensitive if expression contains a capital letter
 
@@ -62,6 +62,31 @@ autocmd FileType cpp set noexpandtab
 autocmd FileType gitcommit setlocal spell textwidth=72
 set showbreak=↪
 
+" Completion
+set complete=.,w,b,u,t,i,kspell
+set completeopt=menu
+set wildmenu                                           " Better completion in the CLI
+set wildmode=longest:full,full                         " Completion settings
+set wildignore+=*/venv/*
+
+" Yeah... these get typoed
+command W w
+command Q q
+command Wq wq
+command WQ wq
+
+" Wordcount
+command! Wc :w !wc
+
+" autocmd BufWritePre * :%s/\s\+$//e
+
+" Syntastic
+let g:syntastic_python_flake8_args="--max-complexity 10"
+
+if &shell =~# 'fish$'
+  set shell=bash
+endif
+
 " Podspecs ------ {{{
 augroup ft_podspec
   autocmd!
@@ -72,41 +97,3 @@ augroup ft_podspec
   autocmd FileType podfile set makeprg=pod\ install
 augroup END
 " }}}
-
-nmap <leader>l :set list!<CR>
-set listchars=tab:▸\ ,trail:▝,eol:¬
-set list
-
-set mouse=a
-
-" Paste
-command! Pa :w !curl -F 'paste=<-' http://s.drk.sc
-
-" Wordcount
-command! Wc :w !wc
-
-autocmd FileType rst set makeprg=rst2pdf\ %
-
-color jellybeans
-
-" autocmd BufWritePre * :%s/\s\+$//e
-
-set wildignore+=*/venv/*
-
-" Yeah... these get typoed
-command W w
-command Q q
-command Wq wq
-command WQ wq 
-
-" Gist
-let g:gist_clip_command = 'pbcopy'
-let g:gist_post_private = 1
-
-" Syntastic
-let g:syntastic_python_flake8_args="--max-complexity 10"
-
-if &shell =~# 'fish$'
-  set shell=bash
-endif
-
