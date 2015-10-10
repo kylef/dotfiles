@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+
+import rlcompleter, readline
+readline.parse_and_bind('tab: complete')
+
+import os
+import sys
