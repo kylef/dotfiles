@@ -5,6 +5,7 @@ set PATH $GEM_HOME/bin $PATH
 
 set -x LSCOLORS Gxfxcxdxbxegedabagacad
 set -x EDITOR vim
+set -x PAGER vimpager
 
 set -x PIP_REQUIRE_VIRTUALENV "true"
 set -x PYTHONSTARTUP $HOME/.pystartup
