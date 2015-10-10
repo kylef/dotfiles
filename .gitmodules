@@ -1,3 +1,0 @@
-[submodule "Xcode5 Plugin.xctemplate"]
-	path = Library/Developer/Xcode/Templates/Project Templates/Application Plug-in/Xcode5 Plugin.xctemplate
-	url = https://github.com/kattrali/Xcode5-Plugin-Template
