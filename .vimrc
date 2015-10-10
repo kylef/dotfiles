@@ -12,7 +12,6 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-sensible'
 
 call plug#end()
@@ -58,8 +57,6 @@ set directory=$HOME/.vim/tmp//,. " Keep swap files in one place
 set tabstop=4 " Use 4 spaces to a tab
 set shiftwidth=4 " As above
 set expandtab " Expand tabs into spaces
-autocmd FileType cpp set noexpandtab
-autocmd FileType gitcommit setlocal spell textwidth=72
 set showbreak=↪
 
 " Completion
@@ -68,6 +65,12 @@ set completeopt=menu
 set wildmenu                                           " Better completion in the CLI
 set wildmode=longest:full,full                         " Completion settings
 set wildignore+=*/venv/*
+
+" Files
+autocmd FileType cpp set noexpandtab
+autocmd FileType gitcommit setlocal spell textwidth=72
+autocmd FileType markdown setlocal spell textwidth=79
+autocmd FileType apiblueprint setlocal spell textwidth=79
 
 " Yeah... these get typoed
 command W w
