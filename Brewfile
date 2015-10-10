@@ -1,16 +1,26 @@
-install fish
-install vim
-install tree
-install wget
+tap 'caskroom/cask'
+tap 'homebrew/bundle'
 
-install tmux
+brew 'aspell'
+brew 'caskroom/cask/brew-cask'
+brew 'cloc'
+brew 'fish'
+brew 'git'
+brew 'gnupg2'
+brew 'heroku-toolbelt'
+brew 'httping'
+brew 'hub'
+brew 'node'
+brew 'python'
+brew 'python3'
+brew 'tmux'
+brew 'tree'
+brew 'vim'
+brew 'vimpager'
+brew 'weechat'
+brew 'wget'
 
-install python
-install python3
-
-install git
-install hub
-
-install xcproj
-
-install heroku-toolbelt
+case 'dropbox'
+cask 'flux'
+cask 'iterm2-beta'
+cask 'xscreensaver'
