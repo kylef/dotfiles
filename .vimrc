@@ -12,6 +12,7 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/syntastic'
+Plug 'sjl/vitality.vim'
 Plug 'tpope/vim-sensible'
 
 call plug#end()
@@ -71,6 +72,22 @@ autocmd FileType cpp set noexpandtab
 autocmd FileType gitcommit setlocal spell textwidth=72
 autocmd FileType markdown setlocal spell textwidth=79
 autocmd FileType apiblueprint setlocal spell textwidth=79
+
+" Copy copy register to OS X general pasteboard
+function! PBCopy()
+  call system("pbcopy", getreg(""))
+endfunction
+
+" Paste from OS X general pasteboard to copy register
+function! PBPaste()
+  call setreg("", system("pbpaste"))
+endfunction
+
+" By the power of https://github.com/sjl/vitality.vim, copies and pastes
+" to the OS X pasteboard when switching between vim and other windows
+" (even in tmux)
+autocmd FocusLost * :call PBCopy()
+autocmd FocusGained * :call PBPaste()
 
 " Yeah... these get typoed
 command W w
