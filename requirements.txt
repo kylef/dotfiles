@@ -1,6 +1,0 @@
-virtualenv
-
-# flake 8 and plugins
-flake8
-mccabe
-pep8-naming
