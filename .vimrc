@@ -13,6 +13,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/syntastic'
 Plug 'sjl/vitality.vim'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 
 call plug#end()
