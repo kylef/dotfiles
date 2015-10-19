@@ -1,0 +1,17 @@
+rules "~MD004",  # Unordered list style
+      "~MD007",  # Unordered list indentation
+      "~MD012",  # Multiple consecutive blank lines
+      "~MD013",  # Line Length
+      "~MD014",  # Dollar signs used before commands without showing output
+      "~MD022",  # Headers should be surrounded by blank lines
+      "~MD032",  # Lists should be surrounded by blank lines
+      "~MD033",  # Inline HTML
+      "~MD024",  # Multiple headers with the same content
+      "~MD025",  # Multiple headers
+      "~MD026",  # Trailing punctuation in header
+      "~MD027",  # Multiple spaces after blockquote symbol
+      "~MD028",  # Blank line inside blockquote
+      "~MD029",  # Ordered list item prefix
+      "~MD031",  # Fenced code blocks should be surrounded by blank lines
+      "~MD034",  # Base URL used
+      "~MD036"  # Emphasis used instead of a header
