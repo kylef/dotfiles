@@ -21,5 +21,4 @@ brew 'weechat'
 brew 'wget'
 
 cask 'dropbox'
-cask 'iterm2-beta'
 cask 'xscreensaver'
