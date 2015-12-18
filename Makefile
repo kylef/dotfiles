@@ -1,7 +1,7 @@
 PIP=PIP_REQUIRE_VIRTUALENV=false pip
 
-all: osx python-packages
-osx: homebrew-packages
+all: .swiftenv
+osx: homebrew-packages python-packages all
 
 /usr/local/bin/brew:
 	@echo Installing Homebrew
@@ -23,3 +23,8 @@ python-packages: /usr/local/bin/virtualenv /usr/local/bin/rfc
 /usr/local/bin/rfc:
 	$(PIP) install rfc
 
+.swiftenv:
+	git clone https://github.com/kylef/swiftenv .swiftenv
+
+fish:
+	@chsh -s $(shell which fish)
