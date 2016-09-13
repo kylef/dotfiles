@@ -11,12 +11,16 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'kylef/apiblueprint.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle','NERDTreeFind'] }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/vitality.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 
 call plug#end()
+
+nnoremap <Leader>t :NERDTreeToggle<cr>
+nnoremap <Leader>j :NERDTreeFind<cr>
 
 set hidden " Handle multiple buffers better
 
