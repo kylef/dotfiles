@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Keithbsmiley/swift.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dag/vim-fish'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kylef/apiblueprint.vim'
@@ -16,9 +15,11 @@ Plug 'scrooloose/syntastic'
 Plug 'sjl/vitality.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+nnoremap <Leader>p :Files<cr>
 nnoremap <Leader>t :NERDTreeToggle<cr>
 nnoremap <Leader>j :NERDTreeFind<cr>
 
