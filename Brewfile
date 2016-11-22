@@ -22,7 +22,9 @@ brew 'vimpager'
 brew 'weechat'
 brew 'wget'
 
-cask 'dropbox'
+cask 'docker'
+cask 'google-chrome'
+cask 'private-internet-access'
 cask 'xscreensaver'
 
 mas 'Xcode', id: 497799835
