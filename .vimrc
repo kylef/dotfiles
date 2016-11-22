@@ -15,6 +15,7 @@ Plug 'scrooloose/syntastic'
 Plug 'sjl/vitality.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
+Plug 'leafgarland/typescript-vim'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
 call plug#end()
