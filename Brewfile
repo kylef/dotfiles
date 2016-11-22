@@ -11,6 +11,7 @@ brew 'gnupg2'
 brew 'heroku-toolbelt'
 brew 'httping'
 brew 'hub'
+brew 'mas'
 brew 'node'
 brew 'pyenv'
 brew 'redshift'
@@ -23,3 +24,6 @@ brew 'wget'
 
 cask 'dropbox'
 cask 'xscreensaver'
+
+mas 'Xcode', id: 497799835
+mas '1Password', id: 443987910
