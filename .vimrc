@@ -24,6 +24,10 @@ nnoremap <Leader>p :Files<cr>
 nnoremap <Leader>t :NERDTreeToggle<cr>
 nnoremap <Leader>j :NERDTreeFind<cr>
 
+nnoremap <C-n> :tabn<cr>
+nnoremap <C-p> :tabp<cr>
+nnoremap <C-c> :tabnew<cr>
+
 set hidden " Handle multiple buffers better
 
 " Interface
