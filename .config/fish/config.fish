@@ -1,11 +1,8 @@
 set fish_greeting
 
-set -x GEM_HOME $HOME/gems
-set PATH $GEM_HOME/bin $PATH
-
 set -x LSCOLORS Gxfxcxdxbxegedabagacad
 set -x EDITOR vim
-set -x PAGER vimpager
+set -x MANPAGER vimpager
 
 set -x PIP_REQUIRE_VIRTUALENV "true"
 set -x PYTHONSTARTUP $HOME/.pystartup

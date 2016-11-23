@@ -1,0 +1,8 @@
+call plug#begin('~/.vim/plugged')
+Plug 'nanotech/jellybeans.vim'
+call plug#end()
+
+set nowrap
+set readonly
+color jellybeans
+set showmode
