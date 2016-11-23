@@ -15,3 +15,5 @@ if test -d "$HOME/.swiftenv"
   setenv PATH "$SWIFTENV_ROOT/bin" $PATH
   status --is-interactive; and . (swiftenv init -|psub)
 end
+
+set -x FZF_DEFAULT_COMMAND 'ag -g ""'

@@ -1,6 +1,7 @@
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
 
+brew 'ag'
 brew 'aspell'
 brew 'awscli'
 brew 'cloc'
