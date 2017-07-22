@@ -30,3 +30,4 @@ cask 'xscreensaver'
 
 mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910
+mas 'Deckset', id: 847496013
