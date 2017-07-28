@@ -4,8 +4,11 @@ BREW=/usr/local/bin/brew
 BREW_BUNDLE=/usr/local/Homebrew/Library/Taps/homebrew/homebrew-bundle
 FIN=.config/fish/functions/fin.fish
 
-all: .swiftenv $(FIN)
-osx: homebrew-packages python-packages all
+OS := $(shell uname)
+
+all: $(OS) .swiftenv $(FIN)
+
+Darwin: homebrew-packages python-packages all
 
 $(BREW):
 	@echo Installing Homebrew
