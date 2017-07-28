@@ -8,7 +8,7 @@ OS := $(shell uname)
 
 all: $(OS) .swiftenv $(FIN)
 
-Darwin: homebrew-packages python-packages all
+Darwin: homebrew-packages vim-packages python-packages
 
 $(BREW):
 	@echo Installing Homebrew
@@ -20,6 +20,10 @@ $(BREW_BUNDLE): $(BREW)
 .PHONY: homebrew-packages
 homebrew-packages: $(BREW_BUNDLE)
 	brew bundle
+
+.PHONY: vim-packages
+vim-packages:
+	@vim -c PlugUpgrade -c PlugInstall -c qall
 
 .PHONY: python-packages
 python-packages: /usr/local/bin/virtualenv /usr/local/bin/rfc
