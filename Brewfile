@@ -28,6 +28,7 @@ cask 'google-chrome'
 cask 'private-internet-access'
 cask 'xscreensaver'
 
-mas 'Xcode', id: 497799835
 mas '1Password', id: 443987910
 mas 'Deckset', id: 847496013
+mas 'Todoist', id: 585829637
+mas 'Xcode', id: 497799835
