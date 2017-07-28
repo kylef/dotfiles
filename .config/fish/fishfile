@@ -3,5 +3,6 @@ fisherman/fzf
 fisherman/get
 fisherman/getopts
 fisherman/grc
+fisherman/jellyfish
 fisherman/last_job_id
 fisherman/pyenv
