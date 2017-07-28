@@ -31,5 +31,6 @@ cask 'xscreensaver'
 mas '1Blocker', id: 1107421413
 mas '1Password', id: 443987910
 mas 'Deckset', id: 847496013
+mas 'Slack', id: 803453959
 mas 'Todoist', id: 585829637
 mas 'Xcode', id: 497799835
