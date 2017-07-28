@@ -2,13 +2,12 @@ PIP=PIP_REQUIRE_VIRTUALENV=false pip
 
 BREW=/usr/local/bin/brew
 BREW_BUNDLE=/usr/local/Homebrew/Library/Taps/homebrew/homebrew-bundle
-FIN=.config/fish/functions/fin.fish
 
 OS := $(shell uname)
 
-all: $(OS) .swiftenv $(FIN)
+all: $(OS) .swiftenv vim-packages fish-packages
 
-Darwin: homebrew-packages vim-packages python-packages
+Darwin: homebrew-packages python-packages
 
 $(BREW):
 	@echo Installing Homebrew
@@ -40,5 +39,6 @@ python-packages: /usr/local/bin/virtualenv /usr/local/bin/rfc
 fish:
 	@chsh -s $(shell which fish)
 
-$(FIN):
-	curl -Lo ~/.config/fish/functions/fin.fish --create-dirs git.io/fin
+.PHONY: fish-packages
+fish-packages:
+	@fish -c fisher
