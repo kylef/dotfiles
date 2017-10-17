@@ -9,7 +9,7 @@ Cloning the dotfiles:
 ```shell
 $ alias home="git --work-tree=$HOME --git-dir=$HOME/.files.git"
 $ home init
-$ home remote add origin https://github.com/kylef/dotfiles
+$ home remote add origin https://github.com/kylef/dotfiles.git
 $ home fetch
 $ home checkout master
 ```
