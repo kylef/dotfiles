@@ -1,5 +1,7 @@
 set fish_greeting
 
+set -x LANG en_GB.UTF-8
+
 set -x LSCOLORS Gxfxcxdxbxegedabagacad
 set -x EDITOR vim
 set -x MANPAGER vimpager
