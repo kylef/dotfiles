@@ -5,7 +5,7 @@ BREW_BUNDLE=/usr/local/Homebrew/Library/Taps/homebrew/homebrew-bundle
 
 OS := $(shell uname)
 
-all: $(OS) .swiftenv vim-packages fish-packages
+all: $(OS) vim-packages fish-packages
 
 Darwin: homebrew-packages python-packages
 
@@ -32,9 +32,6 @@ python-packages: /usr/local/bin/virtualenv /usr/local/bin/rfc
 
 /usr/local/bin/rfc:
 	$(PIP) install rfc
-
-.swiftenv:
-	git clone https://github.com/kylef/swiftenv .swiftenv
 
 fish:
 	@chsh -s $(shell which fish)
