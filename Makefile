@@ -7,7 +7,7 @@ OS := $(shell uname)
 
 all: $(OS) vim-packages fish-packages
 
-Darwin: homebrew-packages python-packages
+Darwin: homebrew-packages
 
 $(BREW):
 	@echo Installing Homebrew
@@ -23,15 +23,6 @@ homebrew-packages: $(BREW_BUNDLE)
 .PHONY: vim-packages
 vim-packages:
 	@vim -c PlugUpgrade -c PlugInstall -c qall
-
-.PHONY: python-packages
-python-packages: /usr/local/bin/virtualenv /usr/local/bin/rfc
-
-/usr/local/bin/virtualenv:
-	$(PIP) install virtualenv
-
-/usr/local/bin/rfc:
-	$(PIP) install rfc
 
 fish:
 	@chsh -s $(shell which fish)
