@@ -1,5 +1,6 @@
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
+tap 'kylef/formulae'
 
 brew 'ag'
 brew 'aspell'
