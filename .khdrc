@@ -1,0 +1,4 @@
+ctrl - r : khd -e reload; brew services restart chunkwm
+
+ctrl - f: chunkc tiling::window --toggle fullscreen
+ctrl + shift - f: chunkc tiling::desktop --toggle offset
