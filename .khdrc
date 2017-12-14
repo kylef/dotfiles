@@ -1,4 +1,7 @@
-ctrl - r : khd -e reload; brew services restart chunkwm
+cmd + shift - r : khd -e reload; brew services restart chunkwm
 
-ctrl - f: chunkc tiling::window --toggle fullscreen
-ctrl + shift - f: chunkc tiling::desktop --toggle offset
+cmd - l : chunkc tiling::window --toggle fullscreen
+cmd + shift - f : chunkc tiling::desktop --toggle offset
+
+cmd - b : open -a Safari
+cmd - return : open -a Terminal
