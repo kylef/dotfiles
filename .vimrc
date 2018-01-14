@@ -10,6 +10,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'kylef/apiblueprint.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nvie/vim-flake8'
+Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle','NERDTreeFind'] }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/vitality.vim'
@@ -21,6 +22,7 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 call plug#end()
 
 nnoremap <Leader>p :Files<cr>
+nnoremap <Leader>ag :Ag <cword><cr>
 nnoremap <Leader>t :NERDTreeToggle<cr>
 nnoremap <Leader>j :NERDTreeFind<cr>
 
