@@ -8,6 +8,7 @@ OS := $(shell uname)
 all: $(OS) vim-packages fish-packages
 
 Darwin: homebrew-packages
+Linux:
 
 $(BREW):
 	@echo Installing Homebrew
