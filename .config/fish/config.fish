@@ -17,3 +17,5 @@ if test -d "$HOME/.swiftenv"
 end
 
 set -x FZF_DEFAULT_COMMAND 'ag -g ""'
+
+eval (direnv hook fish)
