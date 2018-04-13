@@ -4,8 +4,7 @@ chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 chunkc core::hotload 1
 
 chunkc set global_desktop_mode           bsp
-chunkc set 2_desktop_mode                monocle
-chunkc set 5_desktop_mode                float
+chunkc set 3_desktop_mode                monocle
 
 chunkc set global_desktop_offset_top     20
 chunkc set global_desktop_offset_bottom  20
@@ -42,7 +41,6 @@ chunkc set window_fade_duration          0.25
 chunkc set window_use_cgs_move           0
 
 chunkc core::load tiling.so
-chunkc core::load ffm.so
 
 chunkc tiling::rule --owner Finder --name Copy --state float
 chunkc tiling::rule --owner \"App Store\" --state float
