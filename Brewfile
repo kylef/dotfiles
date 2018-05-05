@@ -40,6 +40,7 @@ brew 'wget'
 cask 'docker'
 cask 'google-chrome'
 cask 'private-internet-access'
+cask 'time-out'
 cask 'xscreensaver'
 cask 'zoomus'
 
