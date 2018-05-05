@@ -1,4 +1,7 @@
+# vi:syntax=ruby
+
 tap 'caskroom/cask'
+tap 'caskroom/drivers'
 tap 'crisidev/homebrew-chunkwm'
 tap 'homebrew/bundle'
 tap 'koekeishiya/formulae'
@@ -33,10 +36,14 @@ brew 'vimpager'
 brew 'weechat'
 brew 'wget'
 
+# caskroom/cask
 cask 'docker'
 cask 'google-chrome'
 cask 'private-internet-access'
 cask 'xscreensaver'
+
+# caskroom/drivers
+cask 'logitech-options'
 
 mas '1Blocker', id: 1107421413
 mas '1Password', id: 443987910
