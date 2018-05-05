@@ -41,6 +41,7 @@ cask 'docker'
 cask 'google-chrome'
 cask 'private-internet-access'
 cask 'xscreensaver'
+cask 'zoomus'
 
 # caskroom/drivers
 cask 'logitech-options'
