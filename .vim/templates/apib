@@ -1,0 +1,7 @@
+# API Name
+
+## GET /
+
++ Response 200 (application/json)
+    + Attributes
+        + message: Hello World

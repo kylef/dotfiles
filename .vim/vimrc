@@ -80,6 +80,11 @@ set wildmenu                                           " Better completion in th
 set wildmode=longest:full,full                         " Completion settings
 set wildignore+=*/venv/*
 
+" Use templates for new files
+" from https://twitter.com/petdance/status/1009826710752317440
+autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e
+autocmd BufNewFile * silent! 0r ~/.vim/templates/%:t
+
 " Files
 autocmd FileType cpp set noexpandtab
 autocmd FileType gitcommit setlocal spell textwidth=72
