@@ -18,7 +18,7 @@
     conflict = "!f() { git status -s | grep ^UU | awk '{print $2}' ; }; vim `f`"
 
 [push]
-    default = simple
+    default = current
 
 [hub]
     protocol = https
