@@ -1,0 +1,103 @@
+# General
+
+meh - 0 : brew services restart chunkwm
+hyper - return : osascript -e 'tell application "iTerm2" to make create window with default profile'
+
+# Current Window (hyper)
+
+# swap window
+hyper - left : chunkc tiling::window --swap west
+hyper - down : chunkc tiling::window --swap south
+hyper - up : chunkc tiling::window --swap north
+hyper - right : chunkc tiling::window --swap east
+
+# toggle window fullscreen
+hyper - f : chunkc tiling::window --toggle fullscreen
+
+# float / unfloat window (detach)
+hyper - d : chunkc tiling::window --toggle float
+
+# send window to desktop
+hyper - 1 : chunkc tiling::window --send-to-desktop 1
+hyper - 2 : chunkc tiling::window --send-to-desktop 2
+hyper - 3 : chunkc tiling::window --send-to-desktop 3
+hyper - 4 : chunkc tiling::window --send-to-desktop 4
+hyper - 5 : chunkc tiling::window --send-to-desktop 5
+
+# send window to monitor and follow focus
+hyper - 6  : chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
+hyper - 7  : chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
+hyper - 8  : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
+
+# Resize mode
+:: resize @ : chunkc border::color 0xff24ccaa
+
+# enter resize mode
+hyper - r ; resize
+
+# leave resize mode
+resize < escape ; default
+resize < return ; default
+
+resize < up : chunkc tiling:window --use-temporary-ratio 0.1 --adjust-window-edge north
+resize < down : chunkc tiling:window --use-temporary-ratio 0.1 --adjust-window-edge south
+resize < left : chunkc tiling:window --use-temporary-ratio 0.1 --adjust-window-edge west
+resize < right : chunkc tiling:window --use-temporary-ratio 0.1 --adjust-window-edge east
+
+resize < shift - up : chunkc tiling:window --use-temporary-ratio -0.1 --adjust-window-edge south
+resize < shift - down : chunkc tiling:window --use-temporary-ratio -0.1 --adjust-window-edge north
+resize < shift - left : chunkc tiling:window --use-temporary-ratio -0.1 --adjust-window-edge east
+resize < shift - right : chunkc tiling:window --use-temporary-ratio -0.1 --adjust-window-edge west
+
+# Current Desktop (meh)
+
+# focus window
+meh - left : chunkc tiling::window --focus west
+meh - down : chunkc tiling::window --focus south
+meh - up : chunkc tiling::window --focus north
+meh - right : chunkc tiling::window --focus east
+
+# rotate tree
+meh - r : chunkc tiling::desktop --rotate 90
+
+# mirror tree y-axis
+meh - y : chunkc tiling::desktop --mirror vertical
+
+# mirror tree x-axis
+meh - x : chunkc tiling::desktop --mirror horizontal
+
+# toggle desktop offset (gaps)
+meh - g : chunkc tiling::desktop --toggle offset
+
+# toggle window native fullscreen
+meh - f : chunkc tiling::window --toggle native-fullscreen
+
+# toggle window split type
+meh - s : chunkc tiling::window --toggle split
+
+# equalize size of windows
+meh - e : chunkc tiling::desktop --equalize
+
+# change layout of desktop
+meh - b : chunkc tiling::desktop --layout bsp
+meh - m : chunkc tiling::desktop --layout monocle
+meh - d : chunkc tiling::desktop --layout float
+
+# move to desktop
+meh - 1 : chunkc tiling::desktop --focus 1
+meh - 2 : chunkc tiling::desktop --focus 2
+meh - 3 : chunkc tiling::desktop --focus 3
+meh - 4 : chunkc tiling::desktop --focus 4
+meh - 5 : chunkc tiling::desktop --focus 5
+
+# focus monitor
+meh - 6  : chunkc tiling::monitor -f 1
+meh - 7  : chunkc tiling::monitor -f 2
+meh - 8  : chunkc tiling::monitor -f 3
+
+# set insertion point for focused container
+ctrl + alt - f : chunkc tiling::window --use-insertion-point cancel
+ctrl + alt - h : chunkc tiling::window --use-insertion-point west
+ctrl + alt - j : chunkc tiling::window --use-insertion-point south
+ctrl + alt - k : chunkc tiling::window --use-insertion-point north
+ctrl + alt - l : chunkc tiling::window --use-insertion-point east
