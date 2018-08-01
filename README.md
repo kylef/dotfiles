@@ -37,18 +37,18 @@ Actions that affect the focussed window.
 | hyper - f     | Toggle fullscreen     |
 | hyper - d     | Toggle Float          |
 | hyper - r     | Enter resize mode     |
-| hyper - up    | Swap up window        |
-| hyper - right | Swap right window     |
-| hyper - down  | Swap down window      |
-| hyper - left  | Swap left window      |
-| hyper - 1     | Send to Desktop 1     |
-| hyper - 2     | Send to Desktop 2     |
-| hyper - 3     | Send to Desktop 3     |
-| hyper - 4     | Send to Desktop 4     |
-| hyper - 5     | Send to Desktop 5     |
-| hyper - 6     | Send to Monitor 1     |
-| hyper - 7     | Send to Monitor 2     |
-| hyper - 8     | Send to Monitor 3     |
+| hyper - up    | Focus up window       |
+| hyper - right | Focus right window    |
+| hyper - down  | Focus down window     |
+| hyper - left  | Focus left window     |
+| hyper - 1     | Focus Desktop 1       |
+| hyper - 2     | Focus Desktop 2       |
+| hyper - 3     | Focus Desktop 3       |
+| hyper - 4     | Focus Desktop 4       |
+| hyper - 5     | Focus Desktop 5       |
+| hyper - 6     | Focus Monitor 1       |
+| hyper - 7     | Focus Monitor 2       |
+| hyper - 8     | Focus Monitor 3       |
 
 ##### Resize Mode
 
@@ -77,17 +77,17 @@ Actions that affect the focussed window.
 | meh - b       | BSP Mode              |
 | meh - m       | Monocle Mode          |
 | meh - d       | Floating Mode         |
-| meh - s       | Toggle split |
+| meh - s       | Toggle split          |
 | meh - f       | Toggle native fullscreen |
-| meh - up      | Focus up window       |
-| meh - right   | Focus right window    |
-| meh - down    | Focus down window     |
-| meh - left    | Focus left window     |
+| meh - up      | Swap up window        |
+| meh - right   | Swap right window     |
+| meh - down    | Swap down window      |
+| meh - left    | Swap left window      |
 | meh - 1       | Move to Desktop 1     |
 | meh - 2       | Move to Desktop 2     |
 | meh - 3       | Move to Desktop 3     |
 | meh - 4       | Move to Desktop 4     |
 | meh - 5       | Move to Desktop 5     |
-| meh - 6       | Focus Monitor 1       |
-| meh - 7       | Focus Monitor 2       |
-| meh - 8       | Focus Monitor 3       |
+| meh - 6       | Move to Monitor 1     |
+| meh - 7       | Move to Monitor 2     |
+| meh - 8       | Move to Monitor 3     |
