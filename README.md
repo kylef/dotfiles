@@ -20,9 +20,27 @@ Installing tools:
 $ make
 ```
 
+## Software
+
+### macOS
+
+- Desktop Environment: aqua
+- Window Manager: [chunkwm](https://koekeishiya.github.io/chunkwm/)
+- Hotkey Daemon: [skhd](https://github.com/koekeishiya/skhd)
+- Editor: vim
+- Browser: Firefox
+- Shell: [fish](http://fishshell.com/)
+
 ## Usage
 
 ### Keyboard Shortcuts
+
+General rule is `ctrl` is for control characters, `cmd` is for the desktop
+environment which includes application specific shortcuts, and text field
+navigation.
+
+`hyper` and `meh` are for the window manager, `hyper` is used for window
+specific actions and `meh` is for workspace or monitor level actions.
 
 | Shortcut       | Action                |
 |----------------|-----------------------|
