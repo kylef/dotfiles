@@ -37,6 +37,11 @@ Actions that affect the focussed window.
 | hyper - f     | Toggle fullscreen     |
 | hyper - d     | Toggle Float          |
 | hyper - r     | Enter resize mode     |
+
+#### Change Focus
+
+| Shortcut      | Action                |
+|---------------|-----------------------|
 | hyper - up    | Focus up window       |
 | hyper - right | Focus right window    |
 | hyper - down  | Focus down window     |
@@ -79,6 +84,12 @@ Actions that affect the focussed window.
 | meh - d       | Floating Mode         |
 | meh - s       | Toggle split          |
 | meh - f       | Toggle native fullscreen |
+| meh - o       | Enter Gaps Mode       |
+
+#### Move Focussed Window
+
+| Shortcut      | Action                |
+|---------------|-----------------------|
 | meh - up      | Swap up window        |
 | meh - right   | Swap right window     |
 | meh - down    | Swap down window      |
@@ -91,3 +102,14 @@ Actions that affect the focussed window.
 | meh - 6       | Move to Monitor 1     |
 | meh - 7       | Move to Monitor 2     |
 | meh - 8       | Move to Monitor 3     |
+
+#### Gaps Mode
+
+| Shortcut      | Action           |
+|---------------|------------------|
+| down          | Decrease Gaps    |
+| up            | Increase Gaps    |
+| left          | Decrease Padding |
+| right         | Increase Padding |
+| esc           | Exit Mode        |
+| return        | Exit Mode        |

@@ -101,3 +101,17 @@ ctrl + alt - h : chunkc tiling::window --use-insertion-point west
 ctrl + alt - j : chunkc tiling::window --use-insertion-point south
 ctrl + alt - k : chunkc tiling::window --use-insertion-point north
 ctrl + alt - l : chunkc tiling::window --use-insertion-point east
+
+# Gap mode
+:: gaps
+
+meh - o ; gaps
+
+# leave resize mode
+gaps < escape ; default
+gaps < return ; default
+
+gaps < up : chunkc tiling:desktop --gap inc
+gaps < down : chunkc tiling:desktop --gap dec
+gaps < left : chunkc tiling:desktop --padding dec
+gaps < right : chunkc tiling:desktop --padding inc
