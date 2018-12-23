@@ -3,21 +3,31 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'sjl/vitality.vim'
+Plug 'tpope/vim-sensible'
+
+" Project
+Plug 'nvie/vim-flake8'
+Plug 'w0rp/ale'
+
+"" Git
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+" Navigation / Search
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle','NERDTreeFind'] }
+
+" Language
 Plug 'dag/vim-fish'
 Plug 'kchmck/vim-coffee-script'
 Plug 'keith/swift.vim'
 Plug 'kylef/apiblueprint.vim'
 Plug 'leafgarland/typescript-vim'
+
+" Layout
 Plug 'nanotech/jellybeans.vim'
-Plug 'nvie/vim-flake8'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle','NERDTreeFind'] }
-Plug 'sjl/vitality.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
-Plug 'w0rp/ale'
 
 call plug#end()
 
