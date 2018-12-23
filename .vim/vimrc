@@ -3,6 +3,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'majutsushi/tagbar'
 Plug 'sjl/vitality.vim'
 Plug 'tpope/vim-sensible'
 
@@ -56,6 +57,8 @@ nnoremap <Leader>gs :Gstatus<cr>
 nnoremap <Leader>gc :Gcommit<cr>
 nnoremap <Leader>gS :Gcommit --amend<cr>
 nnoremap <Leader>go :Gbrowse<cr>
+
+nnoremap <Leader>i :TagbarToggle<CR>
 
 set hidden " Handle multiple buffers better
 
