@@ -35,10 +35,10 @@ call plug#end()
 
 let mapleader=" "  " Map <leader> to space
 
-nnoremap <Leader>p :Files<cr>
+" File Navigation / Search
+nnoremap <Leader>o :Files<cr>
+nnoremap <Leader>f :NERDTreeFind<cr>
 nnoremap <Leader>ag :Ag <cword><cr>
-nnoremap <Leader>t :NERDTreeToggle<cr>
-nnoremap <Leader>j :NERDTreeFind<cr>
 
 nnoremap <C-n> :tabn<cr>
 nnoremap <C-p> :tabp<cr>
