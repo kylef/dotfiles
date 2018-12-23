@@ -90,6 +90,7 @@ autocmd FileType cpp set noexpandtab
 autocmd FileType gitcommit setlocal spell textwidth=72
 autocmd FileType markdown setlocal spell textwidth=79
 autocmd FileType apiblueprint setlocal spell textwidth=79
+autocmd FileType javascript setlocal shiftwidth=2
 
 " Copy copy register to OS X general pasteboard
 function! PBCopy()
