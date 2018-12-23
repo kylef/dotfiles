@@ -7,6 +7,7 @@ Plug 'sjl/vitality.vim'
 Plug 'tpope/vim-sensible'
 
 " Project
+Plug 'janko-m/vim-test'
 Plug 'nvie/vim-flake8'
 Plug 'w0rp/ale'
 
@@ -39,6 +40,10 @@ let mapleader=" "  " Map <leader> to space
 nnoremap <Leader>o :Files<cr>
 nnoremap <Leader>f :NERDTreeFind<cr>
 nnoremap <Leader>ag :Ag <cword><cr>
+
+" Testing
+nnoremap <Leader>t :TestFile<cr>
+nnoremap <Leader>T :TestSuite<cr>
 
 nnoremap <C-n> :tabn<cr>
 nnoremap <C-p> :tabp<cr>
@@ -135,6 +140,9 @@ command! Wc :w !wc
 
 " Syntastic
 let g:syntastic_python_flake8_args="--max-complexity 10"
+
+" vim-test
+let test#strategy = "vimterminal"
 
 if &shell =~# 'fish$'
   set shell=bash
