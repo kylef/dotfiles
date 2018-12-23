@@ -42,6 +42,7 @@ let mapleader=" "  " Map <leader> to space
 nnoremap <Leader>o :Files<cr>
 nnoremap <Leader>f :NERDTreeFind<cr>
 nnoremap <Leader>ag :Ag <cword><cr>
+nnoremap <Leader>b :Buffers<cr>
 
 " Testing
 nnoremap <Leader>t :TestFile<cr>

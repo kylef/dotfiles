@@ -11,6 +11,8 @@ Leader is space.
 | leader - o  | Open File (Fuzzy)         |
 | leader - f  | File Manager              |
 | leader - T  | Run Test Suite            |
+| leader - b  | Swith Buffers (Fuzzy)     |
+| leader - Ag | Search for cword          |
 
 #### Git
 
