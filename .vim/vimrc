@@ -31,6 +31,10 @@ Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
+" Leader
+
+let mapleader=" "  " Map <leader> to space
+
 nnoremap <Leader>p :Files<cr>
 nnoremap <Leader>ag :Ag <cword><cr>
 nnoremap <Leader>t :NERDTreeToggle<cr>
