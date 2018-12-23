@@ -12,8 +12,9 @@ Plug 'nvie/vim-flake8'
 Plug 'w0rp/ale'
 
 "" Git
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " Navigation / Search
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -48,6 +49,13 @@ nnoremap <Leader>T :TestSuite<cr>
 nnoremap <C-n> :tabn<cr>
 nnoremap <C-p> :tabp<cr>
 nnoremap <C-c> :tabnew<cr>
+
+" Git
+
+nnoremap <Leader>gs :Gstatus<cr>
+nnoremap <Leader>gc :Gcommit<cr>
+nnoremap <Leader>gS :Gcommit --amend<cr>
+nnoremap <Leader>go :Gbrowse<cr>
 
 set hidden " Handle multiple buffers better
 
