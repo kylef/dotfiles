@@ -7,11 +7,11 @@ See ["Organising dotfiles in a git repository"](https://fuller.li/posts/organisi
 Cloning the dotfiles:
 
 ```shell
-$ alias home="git --work-tree=$HOME --git-dir=$HOME/.files.git"
-$ home init
-$ home remote add origin https://github.com/kylef/dotfiles.git
-$ home fetch
-$ home checkout master
+$ alias h="env GIT_WORK_TREE=$HOME GIT_DIR=$HOME/.files.git"
+$ h git init
+$ h git remote add origin https://github.com/kylef/dotfiles.git
+$ h git fetch
+$ h git checkout master
 ```
 
 Installing tools:

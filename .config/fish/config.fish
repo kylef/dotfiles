@@ -9,7 +9,7 @@ set -x MANPAGER vimpager
 set -x PIP_REQUIRE_VIRTUALENV "true"
 set -x PYTHONSTARTUP $HOME/.pystartup
 
-alias home="git --work-tree=$HOME --git-dir=$HOME/.files.git"
+alias h="env GIT_WORK_TREE=$HOME GIT_DIR=$HOME/.files.git"
 
 # swiftenv
 if test -d "$HOME/.swiftenv"
