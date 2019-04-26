@@ -35,6 +35,7 @@ brew 'vim'
 brew 'vimpager'
 brew 'weechat'
 brew 'wget'
+brew 'yarn'
 
 # caskroom/cask
 cask 'docker'
