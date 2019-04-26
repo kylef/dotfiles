@@ -1,6 +1,5 @@
 # vi:syntax=ruby
 
-tap 'crisidev/homebrew-chunkwm'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
