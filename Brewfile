@@ -1,9 +1,9 @@
 # vi:syntax=ruby
 
-tap 'caskroom/cask'
-tap 'caskroom/drivers'
 tap 'crisidev/homebrew-chunkwm'
 tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/cask-drivers'
 tap 'koekeishiya/formulae'
 tap 'kylef/formulae'
 
