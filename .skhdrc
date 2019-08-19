@@ -6,16 +6,17 @@ hyper - return : osascript -e 'tell application "iTerm2" to make create window w
 # Current Window (hyper)
 
 # focus window
-hyper - left : chunkc tiling::window --focus west
-hyper - down : chunkc tiling::window --focus south
-hyper - up : chunkc tiling::window --focus north
-hyper - right : chunkc tiling::window --focus east
+hyper - left : yabai -m window --focus west
+hyper - down : yabai -m window --focus south
+hyper - up : yabai -m window --focus north
+hyper - right : yabai -m window --focus east
 
 # toggle window fullscreen
-hyper - f : chunkc tiling::window --toggle fullscreen
+hyper - f : yabai -m window --toggle zoom-fullscreen
 
 # float / unfloat window (detach)
-hyper - d : chunkc tiling::window --toggle float
+hyper - d : yabai -m window --toggle float;\
+            yabai -m window --grid 4:4:1:1:2:2
 
 # focus desktop
 hyper - 1 : chunkc tiling::desktop --focus 1
@@ -52,36 +53,36 @@ resize < shift - right : chunkc tiling:window --use-temporary-ratio -0.1 --adjus
 # Current Desktop (meh)
 
 # swap window
-meh - left : chunkc tiling::window --swap west
-meh - down : chunkc tiling::window --swap south
-meh - up : chunkc tiling::window --swap north
-meh - right : chunkc tiling::window --swap east
+meh - left : yabai -m window --swap west
+meh - down : yabai -m window --swap south
+meh - up : yabai -m window --swap north
+meh - right : yabai -m window --swap east
 
 # rotate tree
-meh - r : chunkc tiling::desktop --rotate 90
+meh - r : yabai -m space --rotate 90
 
 # mirror tree y-axis
-meh - y : chunkc tiling::desktop --mirror vertical
+meh - y : yabai -m space --mirror y-axis
 
 # mirror tree x-axis
-meh - x : chunkc tiling::desktop --mirror horizontal
+meh - x : yabai -m space --mirror x-axis
 
 # toggle desktop offset (gaps)
-meh - g : chunkc tiling::desktop --toggle offset
+meh - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # toggle window native fullscreen
-meh - f : chunkc tiling::window --toggle native-fullscreen
+meh - f : yabai -m window --toggle native-fullscreen
 
 # toggle window split type
-meh - s : chunkc tiling::window --toggle split
+meh - s : yabai -m window --toggle split
 
 # equalize size of windows
-meh - e : chunkc tiling::desktop --equalize
+meh - e : yabai -m space --balance
 
 # change layout of desktop
-meh - b : chunkc tiling::desktop --layout bsp
-meh - m : chunkc tiling::desktop --layout monocle
-meh - d : chunkc tiling::desktop --layout float
+meh - b : yabai -m space --layout bsp
+meh - m : yabai -m space --layout monocle
+meh - d : yabai -m space --layout float
 
 # send window to desktop
 meh - 1 : chunkc tiling::window --send-to-desktop 1
@@ -94,13 +95,6 @@ meh - 5 : chunkc tiling::window --send-to-desktop 5
 meh - 6  : chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
 meh - 7  : chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
 meh - 8  : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
-
-# set insertion point for focused container
-ctrl + alt - f : chunkc tiling::window --use-insertion-point cancel
-ctrl + alt - h : chunkc tiling::window --use-insertion-point west
-ctrl + alt - j : chunkc tiling::window --use-insertion-point south
-ctrl + alt - k : chunkc tiling::window --use-insertion-point north
-ctrl + alt - l : chunkc tiling::window --use-insertion-point east
 
 # Gap mode
 :: gaps
