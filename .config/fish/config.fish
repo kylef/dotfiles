@@ -18,4 +18,8 @@ end
 
 set -x FZF_DEFAULT_COMMAND 'ag -g ""'
 
+if ! test -n "$SSH_TTY"
+  set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+end
+
 eval (direnv hook fish)
