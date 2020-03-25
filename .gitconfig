@@ -1,6 +1,7 @@
 [user]
     name = Kyle Fuller
     email = kyle@fuller.li
+    signingkey = 0x1BD589F06F8AADE3
 
 [core]
     excludesfile = ~/.gitignore_global
