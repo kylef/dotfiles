@@ -22,4 +22,6 @@ if ! test -n "$SSH_TTY"
   set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 end
 
-eval (direnv hook fish)
+if type direnv 2> /dev/null
+  eval (direnv hook fish)
+end
