@@ -39,6 +39,7 @@ brew 'wget'
 brew 'yarn'
 
 # caskroom/cask
+cask '1password'
 cask 'docker'
 cask 'google-chrome'
 cask 'private-internet-access'
@@ -50,7 +51,6 @@ cask 'zoomus'
 cask 'logitech-options'
 
 mas '1Blocker', id: 1107421413
-mas '1Password', id: 443987910
 mas 'Deckset', id: 847496013
 mas 'Slack', id: 803453959
 mas 'Todoist', id: 585829637
