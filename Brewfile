@@ -9,7 +9,6 @@ tap 'kylef/formulae'
 brew 'ag'
 brew 'aspell'
 brew 'awscli'
-brew 'chunkwm'
 brew 'cloc'
 brew 'direnv'
 brew 'fish'
@@ -17,7 +16,6 @@ brew 'fzf'
 brew 'git'
 brew 'gnupg'
 brew 'grc'
-brew 'heroku'
 brew 'httping'
 brew 'hub'
 brew 'jq'
@@ -42,7 +40,6 @@ brew 'yarn'
 cask '1password'
 cask 'docker'
 cask 'google-chrome'
-cask 'private-internet-access'
 cask 'time-out'
 cask 'xscreensaver'
 cask 'zoomus'
@@ -50,8 +47,6 @@ cask 'zoomus'
 # caskroom/drivers
 cask 'logitech-options'
 
-mas '1Blocker', id: 1107421413
 mas 'Deckset', id: 847496013
 mas 'Slack', id: 803453959
-mas 'Todoist', id: 585829637
 mas 'Xcode', id: 497799835
