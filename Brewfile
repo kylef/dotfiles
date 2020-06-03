@@ -39,6 +39,7 @@ brew 'yarn'
 # caskroom/cask
 cask '1password'
 cask 'docker'
+cask 'firefox'
 cask 'google-chrome'
 cask 'time-out'
 cask 'xscreensaver'
