@@ -1,0 +1,6 @@
+configuration {
+  font: "Source Code Pro 12";
+  matching: "fuzzy";
+  terminal: "kitty";
+  theme: "themes/main.rasi";
+}
