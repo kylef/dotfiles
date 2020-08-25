@@ -1,0 +1,16 @@
+[database]
+path=/home/kyle/Mail
+
+[user]
+name=Kyle Fuller
+primary_email=kyle@fuller.li
+
+[new]
+tags=new
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true

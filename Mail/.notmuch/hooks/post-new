@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+# archive messages from myself
+notmuch tag -new -- tag:new and from:kyle@fuller.li
+
+# tag sent messages
+notmuch tag +sent -- from:kyle@fuller.li and not tag:sent
+
+notmuch tag -new +inbox +unread -- tag:new
