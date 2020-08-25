@@ -1,0 +1,30 @@
+[global]
+font = Source Code Pro 12
+geometry = "400x3-24+24"
+shrink = no
+transparency = 5
+line_height = 0
+padding = 8
+horizontal_padding = 8
+separator_height = 5
+allow_markup = yes
+format = "<b>%s</b>\n%b\n%p"
+
+# sort by urgency
+sort = yes
+
+[frame]
+width = 0
+color = "#ffa460"
+
+[urgency_critical]
+background = "#464d91"
+foreground = "#111111"
+
+[urgency_normal]
+background = "#111111"
+foreground = "#dedede"
+
+[urgency_low]
+background = "#111111"
+foreground = "#dedede"

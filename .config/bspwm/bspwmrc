@@ -2,6 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x picom > /dev/null || picom -b
+pgrep -x dunst > /dev/null || dunst &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -11,3 +12,6 @@ bspc config window_gap 12
 bspc config split_ratio 0.50
 bspc config borderless_monocle true
 bspc config gapless_monocle true
+
+bspc config normal_border_color "#111111"
+bspc config focused_border_color "#919191"
