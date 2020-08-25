@@ -1,0 +1,11 @@
+defaults
+auth on
+tls on
+tls_starttls off
+port 465
+
+account fastmail
+host smtp.fastmail.com
+from kyle@fuller.li
+user kyle@fuller.li
+passwordeval op get item 'Fastmail' --fields app_password
