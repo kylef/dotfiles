@@ -1,0 +1,21 @@
+[general]
+accounts = kyle
+fsync = false
+pythonfile = ~/.config/offlineimap/config.py
+
+[Account kyle]
+remoterepository = kyle-remote
+localrepository = kyle-local
+postsynchook = notmuch new
+
+[Repository kyle-remote]
+type = IMAP
+remotehost = imap.fastmail.com
+remoteuser = kyle@fuller.li
+remotepasseval = get_op_item('Fastmail', 'app_password')
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository kyle-local]
+type = Maildir
+localfolders = ~/Mail/kyle@fuller.li
