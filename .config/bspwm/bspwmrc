@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep -x picom > /dev/null || picom -b
 pgrep -x dunst > /dev/null || dunst &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
