@@ -1,0 +1,60 @@
+[colors]
+background = #00282a36
+foreground = #dfdfdf
+primary = #ffb52a
+
+[bar/top]
+height = 32
+modules-left = bspwm
+modules-right = audio date
+font-0 = Source Code Pro:style=Regular
+font-1 = "Font Awesome 5 Free Solid:pixelsize=12"
+
+underline-size = 2
+underline-color = #eee
+
+spacing = 1
+padding-left = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+[module/date]
+type = internal/date
+label = %date% %time%
+date = "%d/%m/%Y"
+time = %H:%M
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state> <label-mode>
+
+label-focused-underline = ${colors.primary}
+
+label-focused-background = #222
+label-urgent-underline = #FFA0A0
+label-empty-foreground = #888
+
+label-focused-padding = 1
+label-occupied-padding = 1
+label-urgent-padding = 1
+label-empty-padding = 1
+
+label-focused = %index%
+label-occupied = %index%
+label-empty = %index%
+label-urgent = %index%
+
+[module/audio]
+type = internal/pulseaudio
+label-muted = ""
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
+format-volume = <ramp-volume><label-volume>
+
+; vim:ft=dosini
