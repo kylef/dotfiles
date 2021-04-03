@@ -117,7 +117,6 @@ autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:t
 
 " Files
-autocmd FileType cpp set noexpandtab
 autocmd FileType gitcommit setlocal spell textwidth=72
 autocmd FileType markdown setlocal spell textwidth=79
 autocmd FileType apiblueprint setlocal spell textwidth=79
