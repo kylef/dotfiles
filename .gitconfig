@@ -18,6 +18,9 @@
     standup = !clear && git log --since '1 day ago' --no-merges --pretty=format':%C(yellow)%h %aN%n %B%n' --author 'Kyle Fuller'
     conflict = "!f() { git status -s | grep ^UU | awk '{print $2}' ; }; vim `f`"
 
+[pull]
+    ff = only
+
 [push]
     default = current
 
