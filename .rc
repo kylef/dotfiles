@@ -11,37 +11,5 @@ export EDITOR=vim
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 alias ls='ls -G'
 
-openx () {
-  # http://orta.github.io/rebase/on/opening-xcode-projects-and-workspaces/
-
-  if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"; then
-    open *.xcworkspace
-  else
-    if test -n "$(find . -maxdepth 1 -name '*.xcodeproj' -print -quit)"; then
-      open *.xcodeproj
-    else
-      echo "No Xcode workspace or project found"
-    fi
-  fi
-}
-
-alias snip="curl -F 'paste=<-' http://s.drk.sc"
-alias mac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'"
-alias serve="python -m SimpleHTTPServer"
-
-# git
-
-version() {
-    COMMITS=$(git rev-list HEAD | wc -l)
-    echo "$(git describe --tags --always --dirty) ($((COMMITS)))"
-}
-
-changelog() {
-    git shortlog --no-merges $1..HEAD | pbcopy
-    changes=$(git rev-list $1..HEAD | wc -l)
-    echo "Release notes for $(version) are in your clipboard, $((changes)) changes"
-}
-
 # Source a local .profile if it exists
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
-
