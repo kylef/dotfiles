@@ -23,6 +23,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle','NERDTreeFind'] }
 
 " Language
+Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 Plug 'kchmck/vim-coffee-script'
 Plug 'keith/swift.vim'
