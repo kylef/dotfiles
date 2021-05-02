@@ -3,8 +3,8 @@ set fish_greeting
 set -x LANG en_GB.UTF-8
 
 set -x LSCOLORS Gxfxcxdxbxegedabagacad
-set -x EDITOR vim
-set -x MANPAGER vimpager
+set -x EDITOR nvim
+set -x MANPAGER "$EDITOR -n +Man\!"
 
 set -x PIP_REQUIRE_VIRTUALENV "true"
 set -x PYTHONSTARTUP $HOME/.pystartup
