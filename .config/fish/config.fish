@@ -9,7 +9,7 @@ set -x MANPAGER "$EDITOR -n +Man\!"
 set -x PIP_REQUIRE_VIRTUALENV "true"
 set -x PYTHONSTARTUP $HOME/.pystartup
 
-alias h="env GIT_WORK_TREE=$HOME GIT_DIR=$HOME/.files.git"
+alias h="env FZF_DEFAULT_COMMAND='git ls-files' GIT_WORK_TREE=$HOME GIT_DIR=$HOME/.files.git"
 
 # swiftenv
 if test -d "$HOME/.swiftenv"
