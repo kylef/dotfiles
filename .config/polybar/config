@@ -1,7 +1,10 @@
 [colors]
 background = #00282a36
-foreground = #dfdfdf
-primary = #ffb52a
+foreground = #fff
+foreground-alt = #fff
+primary = #d0996e
+secondary = #e60053
+alert = #993d61
 
 [bar/top]
 height = 32
@@ -10,7 +13,7 @@ modules-right = audio date
 font-0 = Source Code Pro:style=Regular
 font-1 = "Font Awesome 5 Free Solid:pixelsize=12"
 
-underline-size = 2
+underline-size = 4
 underline-color = #eee
 
 spacing = 1
@@ -32,12 +35,10 @@ time = %H:%M
 type = internal/bspwm
 
 format = <label-state> <label-mode>
+inline-mode = true
 
 label-focused-underline = ${colors.primary}
-
-label-focused-background = #222
-label-urgent-underline = #FFA0A0
-label-empty-foreground = #888
+label-urgent-underline = ${colors.alert}
 
 label-focused-padding = 1
 label-occupied-padding = 1
@@ -46,7 +47,7 @@ label-empty-padding = 1
 
 label-focused = %index%
 label-occupied = %index%
-label-empty = %index%
+label-empty = 
 label-urgent = %index%
 
 [module/audio]

@@ -1,12 +1,13 @@
 [global]
 font = Source Code Pro 12
-geometry = "400x3-24+24"
+geometry = "400x3-24+40"
 shrink = no
-transparency = 5
+transparency = 1
 line_height = 0
 padding = 8
 horizontal_padding = 8
-separator_height = 5
+separator_height = 20
+separator_color = frame
 allow_markup = yes
 format = "<b>%s</b>\n%b\n%p"
 
@@ -15,16 +16,16 @@ sort = yes
 
 [frame]
 width = 0
-color = "#ffa460"
+color = "#1C0D3500"
 
 [urgency_critical]
-background = "#464d91"
+background = "#BD4151"
 foreground = "#111111"
 
 [urgency_normal]
-background = "#111111"
-foreground = "#dedede"
+background = "#D0996E"
+foreground = "#111111"
 
 [urgency_low]
-background = "#111111"
+background = "#130C35"
 foreground = "#dedede"

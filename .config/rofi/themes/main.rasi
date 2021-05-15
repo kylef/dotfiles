@@ -1,12 +1,13 @@
 * {
   background-color: #111111;
   text-color: #dedede;
-  border-color: #ffffff;
+  border-color: #D0996E;
   spacing: 0;
 }
 
 window {
   width: 1000px;
+  border: 5;
 }
 
 inputbar {
@@ -34,11 +35,12 @@ listview {
 
 element {
   padding: 16px;
+  margin: 0 10 0 10;
 }
 
 element selected {
-  background-color: #464d91;
-  text-color: #111111;
+  background-color: #993D61;
+  text-color: #fff;
 }
 
 /* vim: ft=css
