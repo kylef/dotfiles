@@ -10,6 +10,8 @@ set -x PIP_REQUIRE_VIRTUALENV "true"
 set -x PYTHONSTARTUP $HOME/.pystartup
 
 alias h="env FZF_DEFAULT_COMMAND='git ls-files' GIT_WORK_TREE=$HOME GIT_DIR=$HOME/.files.git"
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -out"
 
 # swiftenv
 if test -d "$HOME/.swiftenv"
