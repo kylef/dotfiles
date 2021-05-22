@@ -15,8 +15,8 @@
     rev = rev-parse HEAD
     s = status -s
     l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    standup = !clear && git log --since '1 day ago' --no-merges --pretty=format':%C(yellow)%h %aN%n %B%n' --author 'Kyle Fuller'
     conflict = "!f() { git status -s | grep ^UU | awk '{print $2}' ; }; vim `f`"
+    fixup = "!git log --oneline -n 20 | fzf | cut -d ' ' -f 1 | xargs git commit --no-verify --fixup"
 
 [pull]
     ff = only
