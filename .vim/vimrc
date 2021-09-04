@@ -22,9 +22,15 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle','NERDTreeFind'] }
 
+"" LSP / Completion Engines
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'neovim/nvim-lspconfig'
+
 " Language
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
+Plug 'hashivim/vim-terraform'
 Plug 'kchmck/vim-coffee-script'
 Plug 'keith/swift.vim'
 Plug 'kylef/apiblueprint.vim'
@@ -154,3 +160,29 @@ augroup ft_podspec
   autocmd FileType podfile set makeprg=pod\ install
 augroup END
 " }}}
+
+lua <<EOF
+  require'lspconfig'.ansiblels.setup{}
+  require'lspconfig'.bashls.setup{}
+  require'lspconfig'.pyright.setup{}
+  require'lspconfig'.sourcekit.setup{}
+  require'lspconfig'.sumneko_lua.setup{
+    cmd = {'lua-language-server'}
+  }
+  require'lspconfig'.terraformls.setup{}
+
+  local cmp = require'cmp'
+  cmp.setup({
+    snippet = {
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body)
+      end,
+    },
+    mapping = {
+      ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = {
+      { name = 'nvim_lsp' },
+    }
+  })
+EOF
