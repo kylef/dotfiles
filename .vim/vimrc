@@ -62,10 +62,10 @@ nnoremap <C-c> :tabnew<cr>
 
 " Git
 
-nnoremap <Leader>gs :Gstatus<cr>
-nnoremap <Leader>gc :Gcommit<cr>
-nnoremap <Leader>gS :Gcommit --amend<cr>
-nnoremap <Leader>go :Gbrowse<cr>
+nnoremap <Leader>gs :Git status<cr>
+nnoremap <Leader>gc :Git commit<cr>
+nnoremap <Leader>gS :Git commit --amend<cr>
+nnoremap <Leader>go :GBrowse<cr>
 
 nnoremap <Leader>i :TagbarToggle<CR>
 
