@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import json
+import sys
+from csv import DictReader
+from typing import Any, Dict, TextIO
+
+
+def csv2json(fp: TextIO) -> None:
+    reader = DictReader(fp)
+    for row in reader:
+        json.dump(row, sys.stdout)
+        print()
+
+
+if __name__ == '__main__':
+    for arg in sys.argv[1:]:
+        with open(arg) as fp:
+            csv2json(fp)
+
+    if len(sys.argv) == 1:
+        csv2json(sys.stdin)
