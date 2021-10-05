@@ -6,6 +6,7 @@ set -x LSCOLORS Gxfxcxdxbxegedabagacad
 set -x EDITOR nvim
 set -x MANPAGER "$EDITOR -n +Man\!"
 
+set -x PATH "$HOME/.local/bin" $PATH
 set -x PIP_REQUIRE_VIRTUALENV "true"
 set -x PYTHONSTARTUP $HOME/.pystartup
 
