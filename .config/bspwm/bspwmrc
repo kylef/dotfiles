@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x dunst > /dev/null || dunst &
 pgrep -x polybar > /dev/null || polybar top &
 

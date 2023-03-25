@@ -17,5 +17,5 @@ $ h git checkout master
 Installing tools:
 
 ```shell
-$ make
+$ nix run home-manager/master switch
 ```
