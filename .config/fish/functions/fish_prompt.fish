@@ -1,4 +1,8 @@
 function fish_prompt
+    if test -n "$SSH_TTY"
+        echo -n "$hostname "
+    end
+
     if test -n "$REGION"
         set_color FF69B4
         echo -n "[$REGION] "
