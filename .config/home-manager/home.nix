@@ -37,6 +37,7 @@ let
     rofi
     source-code-pro
     xclip
+    xdotool
     xsecurelock
   ];
 
