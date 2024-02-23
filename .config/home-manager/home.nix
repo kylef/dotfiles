@@ -49,7 +49,7 @@ let
 in
 {
   home.username = "kyle";
-  home.homeDirectory = "/home/kyle";
+  home.homeDirectory = if pkgs.stdenv.isDarwin then "/Users/kyfuller" else "/home/kyle";
   home.stateVersion = "23.05";
   home.packages = packages ++ (pkgs.lib.lists.optionals pkgs.stdenv.isLinux guiPackages);
   home.sessionVariables = {
