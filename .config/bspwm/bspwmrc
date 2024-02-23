@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 pgrep -x dunst > /dev/null || dunst &
-pgrep -x polybar > /dev/null || polybar top &
+systemctl --user start polybar.service
 systemctl --user start bspwm.service
 
 bspc monitor -d I II III IV V VI VII VIII IX X

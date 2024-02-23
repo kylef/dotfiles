@@ -83,6 +83,10 @@ in
   programs.direnv.nix-direnv.enable = true;
   programs.home-manager.enable = true;
 
+  services.polybar.enable = true;
+  services.polybar.package = pkgs.polybar.override { pulseSupport = true; };
+  services.polybar.script = "polybar top &";
+
   services.redshift = {
     enable = true;
     provider = "manual";
