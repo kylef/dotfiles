@@ -82,4 +82,11 @@ in
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
   programs.home-manager.enable = true;
+
+  services.redshift = {
+    enable = true;
+    provider = "manual";
+    latitude = "51.6";
+    longitude = "-0.1";
+  };
 }

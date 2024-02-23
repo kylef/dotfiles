@@ -1,7 +1,0 @@
-[Unit]
-Description=Redshift adjusts the color temperature of your screen according to your surroundings
-Documentation=http://jonls.dk/redshift/
-
-[Service]
-Environment=DISPLAY=:0
-ExecStart=/usr/bin/redshift -l 0:0
