@@ -10,6 +10,7 @@ let
     git
     graphviz
     htop
+    ipcalc
     jq
     magic-wormhole
     mosh
@@ -18,6 +19,7 @@ let
     python3
     ripgrep
     silver-searcher
+    sshfs
     tmux
     tree
     unzip
@@ -27,15 +29,18 @@ let
     zip
   ];
   guiPackages = with pkgs; [
+    brightnessctl
     calibre
     dunst
     feh
     firefox
+    font-awesome
     kitty
     maim
     pulsemixer
     rofi
     source-code-pro
+    wireshark
     xclip
     xdotool
     xsecurelock
@@ -45,7 +50,7 @@ in
 {
   home.username = "kyle";
   home.homeDirectory = "/home/kyle";
-  home.stateVersion = "22.11";
+  home.stateVersion = "23.05";
   home.packages = packages ++ (pkgs.lib.lists.optionals pkgs.stdenv.isLinux guiPackages);
   home.sessionVariables = {
     MANPAGER = "nvim -n +Man!";
