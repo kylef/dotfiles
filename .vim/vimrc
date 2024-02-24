@@ -37,6 +37,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'keith/swift.vim'
 Plug 'kylef/apiblueprint.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'LnL7/vim-nix'
 
 " Layout
 Plug 'nanotech/jellybeans.vim'
