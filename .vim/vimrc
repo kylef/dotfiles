@@ -132,6 +132,7 @@ autocmd FileType gitcommit setlocal spell textwidth=72
 autocmd FileType markdown setlocal spell textwidth=79
 autocmd FileType apiblueprint setlocal spell textwidth=79
 autocmd FileType javascript setlocal shiftwidth=2
+autocmd FileType go setlocal noexpandtab
 
 " Yeah... these get typoed
 command W w
@@ -173,6 +174,7 @@ augroup END
 lua <<EOF
   require'lspconfig'.ansiblels.setup{}
   require'lspconfig'.bashls.setup{}
+  require'lspconfig'.gopls.setup{}
   require'lspconfig'.pyright.setup{}
   require'lspconfig'.sourcekit.setup{}
   require'lspconfig'.sumneko_lua.setup{
