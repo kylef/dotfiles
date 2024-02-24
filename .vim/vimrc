@@ -178,9 +178,6 @@ lua <<EOF
   require'lspconfig'.gopls.setup{}
   require'lspconfig'.pyright.setup{}
   require'lspconfig'.sourcekit.setup{}
-  require'lspconfig'.sumneko_lua.setup{
-    cmd = {'lua-language-server'}
-  }
   require'lspconfig'.terraformls.setup{}
 
   local cmp = require'cmp'
