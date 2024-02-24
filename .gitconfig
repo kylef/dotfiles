@@ -27,5 +27,11 @@
 [hub]
     protocol = https
 
-[credential]
-    helper = osxkeychain
+[url "git@github.com:kylef"]
+    insteadOf = https://github.com/kylef
+
+[url "git@github.com:"]
+    pushInsteadOf = https://github.com/
+
+[url "git@gist.github.com:"]
+    pushInsteadOf = https://gist.github.com/
