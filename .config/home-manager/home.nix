@@ -83,6 +83,29 @@ in
   programs.direnv.nix-direnv.enable = true;
   programs.home-manager.enable = true;
 
+  services.sxhkd.enable = true;
+  services.sxhkd.keybindings = {
+    "super + Return" = "${pkgs.kitty}/bin/kitty";
+    "super + b" = "${pkgs.firefox}/bin/firefox";
+    "super + shift + b" = "${pkgs.firefox}/bin/firefox --private-window";
+    "super + space" = "${pkgs.rofi}/bin/rofi -show combi";
+    "super + BackSpace" = "${pkgs.xsecurelock}/bin/xsecurelock";
+    "super + shift + @BackSpace" = "${pkgs.xsecurelock}/bin/xsecurelock -- systemctl suspend";
+    "super + s" = "${pkgs.maim}/bin/maim -s ~/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png";
+
+    "super + q" = "bspc node -c";
+
+    "super + {_, shift +} {1-9,0}" = "bspc {desktop -f,node -d} '^{1-9,10}'";
+    "super + {_,shift +} {Left,Down,Up,Right}" = "bspc node -{f,s} {west,south,north,east}";
+    "super + alt + {Left,Down,Up,Right}" = "bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}";
+    "super + Tab" = "bspc desktop -f last";
+
+    "XF86MonBrightness{Down,Up}" = "${pkgs.brightnessctl}/bin/brightnessctl set {10%-,+10%}";
+    "XF86Audio{Lower,Raise}Volume" = "${pkgs.pamixer}/bin/pamixer -{d,i} 5";
+    "XF86AudioMute" = "${pkgs.pamixer}/bin/pamixer -t";
+    "XF86ScreenSaver" = "${pkgs.xsecurelock}/bin/xsecurelock";
+  };
+
   services.polybar.enable = true;
   services.polybar.package = pkgs.polybar.override { pulseSupport = true; };
   services.polybar.script = "polybar top &";
