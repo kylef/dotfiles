@@ -3,6 +3,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'benmills/vimux'
 Plug 'majutsushi/tagbar'
 Plug 'sjl/vitality.vim'
 Plug 'tpope/vim-sensible'
@@ -54,6 +55,7 @@ nnoremap <Leader>ag :Ag <cword><cr>
 nnoremap <Leader>b :Buffers<cr>
 
 " Testing
+nnoremap <Leader><CR> :TestNearest<cr>
 nnoremap <Leader>t :TestFile<cr>
 nnoremap <Leader>T :TestSuite<cr>
 
@@ -146,7 +148,12 @@ command! Wc :w !wc
 let g:syntastic_python_flake8_args="--max-complexity 10"
 
 " vim-test
-let test#strategy = "vimterminal"
+if &term =~ "^screen"
+  let test#strategy = "vimux"
+  map <Leader>q :call VimuxCloseRunner()<CR>
+else
+  let test#strategy = "neovim"
+endif
 
 if &shell =~# 'fish$'
   set shell=bash
