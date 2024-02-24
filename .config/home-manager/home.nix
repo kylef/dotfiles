@@ -6,7 +6,6 @@ let
     aspellDicts.en
     catgirl
     dig
-    fzf
     git
     graphviz
     htop
@@ -54,7 +53,6 @@ in
   home.packages = packages ++ (pkgs.lib.lists.optionals pkgs.stdenv.isLinux guiPackages);
   home.sessionVariables = {
     MANPAGER = "nvim -n +Man!";
-    FZF_DEFAULT_COMMAND = "ag -g \\\"\\\"";
     PATH = "$HOME/.local/bin:$PATH";
     PYTHONSTARTUP = "$HOME/.pystartup";
   };
@@ -82,6 +80,11 @@ in
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
   programs.home-manager.enable = true;
+
+  programs.fzf = {
+    enable = true;
+    defaultCommand = "${pkgs.silver-searcher}/bin/ag -g \\\"\\\"";
+  };
 
   services.sxhkd.enable = true;
   services.sxhkd.keybindings = {
