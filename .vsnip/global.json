@@ -1,0 +1,20 @@
+{
+  "date": {
+    "prefix": "date",
+    "body": [
+      "$CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE"
+    ]
+  },
+  "rfc3339": {
+    "prefix": "rfc3339",
+    "body": [
+      "1985-04-12T23:20:50.52Z"
+    ]
+  },
+  "uuid": {
+    "prefix": "uuid",
+    "body": [
+      "${VIM:system('python -c \"import uuid, sys;sys.stdout.write(str(uuid.uuid4()))\"')}"
+    ]
+  }
+}

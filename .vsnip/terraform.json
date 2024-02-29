@@ -1,0 +1,26 @@
+{
+  "output": {
+    "prefix": "tf-output",
+    "body": [
+      "output \"$1\" {",
+      "  value = $2",
+      "}"
+    ]
+  },
+  "variable": {
+    "prefix": "tf-variable",
+    "body": [
+      "variable \"$1\" {",
+      "  type = $2",
+      "}"
+    ]
+  },
+  "locals": {
+    "prefix": "tf-locals",
+    "body": [
+      "locals {",
+      "  $1 = $2",
+      "}"
+    ]
+  }
+}

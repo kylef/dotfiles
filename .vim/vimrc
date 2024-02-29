@@ -134,6 +134,12 @@ augroup ft_podspec
 augroup END
 " }}}
 
+" vsnip
+imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+
 lua <<EOF
   require'lspconfig'.ansiblels.setup{}
   require'lspconfig'.bashls.setup{}
@@ -150,10 +156,13 @@ lua <<EOF
       end,
     },
     mapping = {
-      ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
     },
     sources = {
       { name = 'nvim_lsp' },
+      { name = 'vsnip' },
     }
   })
 EOF

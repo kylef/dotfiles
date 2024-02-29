@@ -1,0 +1,10 @@
+{
+  "entry": {
+    "prefix": "entry",
+    "body": [
+      "$CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE * ${1:Payee}",
+      "    ${2:Expenses}                         0.00 GBP",
+      "    ${3:Assets}"
+    ]
+  }
+}

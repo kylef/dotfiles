@@ -1,0 +1,9 @@
+{
+  "if __name__ == '__main__'": {
+    "prefix": ["ifmain"],
+    "body": [
+      "if __name__ == '__main__':",
+      "    ${0:pass}"
+    ]
+  }
+}

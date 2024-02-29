@@ -1,0 +1,64 @@
+{
+  "poetry project": {
+    "prefix": ["sh-py-poetry"],
+    "body": [
+      "{ pkgs ? import <nixpkgs> {} }:",
+      "",
+      "let",
+      "  inherit (pkgs) fetchFromGitHub callPackage;",
+      "",
+      "  poetry2nix-src = fetchFromGitHub {",
+      "      owner = \"nix-community\";",
+      "      repo = \"poetry2nix\";",
+      "      rev = \"e0b44e9e2d3aa855d1dd77b06f067cd0e0c3860d\";",
+      "      # To get sha256, run",
+      "      # nix-prefetch-url --unpack https://github.com/nix-community/poetry2nix/archive/<rev>.tar.gz",
+      "      sha256 = \"0zz3qzp2b5i9gw4yfxfrq07iadcdadackph12h02w19bb3535rm6\";",
+      "  };",
+      "",
+      "  poetry2nix = callPackage poetry2nix-src { };",
+      "",
+      "in",
+      "  let",
+      "    poetryEnv = poetry2nix.mkPoetryEnv {",
+      "      projectDir = ./.;",
+      "      editablePackageSources = {",
+      "        project = ./src;",
+      "      };",
+      "    };",
+      "  in poetryEnv.env.overrideAttrs (oldAttrs: {",
+      "    buildInputs = with pkgs; [",
+      "      isort",
+      "      pyright",
+      "      python3Packages.flake8",
+      "    ];",
+      "  })"
+    ]
+  },
+  "go project": {
+    "prefix": ["sh-golang"],
+    "body": [
+      "{ pkgs ? import <nixpkgs> {} }:",
+      "",
+      "pkgs.mkShell {",
+      "  packages = with pkgs; [",
+      "    go",
+      "    gopls",
+      "  ];",
+      "}"
+    ]
+  },
+  "terraform project": {
+    "prefix": ["sh-terraform"],
+    "body": [
+      "{ pkgs ? import <nixpkgs> {} }:",
+      "",
+      "pkgs.mkShell {",
+      "  packages = with pkgs; [",
+      "    terraform",
+      "    terraform-ls",
+      "  ];",
+      "}"
+    ]
+  }
+}

@@ -112,6 +112,8 @@ in
       nvim-lspconfig
       nvim-cmp
       cmp-nvim-lsp
+      vim-vsnip
+      cmp-vsnip
     ];
   };
   programs.direnv.enable = true;
