@@ -49,7 +49,7 @@ let
 in
 {
   home.username = "kyle";
-  home.homeDirectory = if pkgs.stdenv.isDarwin then "/Users/kyfuller" else "/home/kyle";
+  home.homeDirectory = (if pkgs.stdenv.isDarwin then "/Users/" else "/home/") + "kyle";
   home.stateVersion = "23.05";
   home.packages = packages ++ (pkgs.lib.lists.optionals pkgs.stdenv.isLinux guiPackages);
   home.sessionVariables = {
@@ -125,7 +125,7 @@ in
     defaultCommand = "${pkgs.silver-searcher}/bin/ag -g \\\"\\\"";
   };
 
-  services.sxhkd.enable = true;
+  services.sxhkd.enable = pkgs.stdenv.isLinux;
   services.sxhkd.keybindings = {
     "super + Return" = "${pkgs.kitty}/bin/kitty";
     "super + b" = "${pkgs.firefox}/bin/firefox";
@@ -148,12 +148,12 @@ in
     "XF86ScreenSaver" = "${pkgs.xsecurelock}/bin/xsecurelock";
   };
 
-  services.polybar.enable = true;
+  services.polybar.enable = pkgs.stdenv.isLinux;
   services.polybar.package = pkgs.polybar.override { pulseSupport = true; };
   services.polybar.script = "polybar top &";
 
   services.redshift = {
-    enable = true;
+    enable = pkgs.stdenv.isLinux;
     provider = "manual";
     latitude = "51.6";
     longitude = "-0.1";
