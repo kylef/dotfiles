@@ -111,6 +111,7 @@ in
       # lsp
       nvim-lspconfig
       nvim-cmp
+      cmp-buffer
       cmp-nvim-lsp
       vim-vsnip
       cmp-vsnip
