@@ -92,6 +92,8 @@ autocmd FileType apiblueprint setlocal spell textwidth=79
 autocmd FileType javascript setlocal shiftwidth=2
 autocmd FileType go setlocal noexpandtab
 
+au BufRead,BufNewFile *.dat set filetype=ledger
+
 " Yeah... these get typoed
 command W w
 command Q q

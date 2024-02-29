@@ -35,6 +35,7 @@ let
     firefox
     font-awesome
     kitty
+    ledger
     maim
     pulsemixer
     rofi
@@ -102,6 +103,7 @@ in
       typescript-vim
       vim-fish
       vim-flake8
+      vim-ledger
       vim-nix
       vim-terraform
       vim-toml
