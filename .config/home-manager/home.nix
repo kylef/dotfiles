@@ -76,6 +76,41 @@ in
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    plugins = with pkgs.vimPlugins; [
+      # theme
+      jellybeans-vim
+
+      vim-sensible
+
+      # project
+      ack-vim
+      ale
+      fzf-vim
+      nerdtree
+      tagbar
+      vim-test
+      vimux
+
+      # git
+      vim-fubitive  # fugitive + bitbucket
+      vim-fugitive
+      vim-gitgutter
+      vim-rhubarb  # fugitive + github
+
+      # languages
+      swift-vim
+      typescript-vim
+      vim-fish
+      vim-flake8
+      vim-nix
+      vim-terraform
+      vim-toml
+
+      # lsp
+      nvim-lspconfig
+      nvim-cmp
+      cmp-nvim-lsp
+    ];
   };
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;

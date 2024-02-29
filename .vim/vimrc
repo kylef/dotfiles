@@ -1,49 +1,6 @@
 set nocompatible
 filetype off
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'benmills/vimux'
-Plug 'majutsushi/tagbar'
-Plug 'sjl/vitality.vim'
-Plug 'tpope/vim-sensible'
-
-" Project
-Plug 'janko-m/vim-test'
-Plug 'nvie/vim-flake8'
-Plug 'w0rp/ale'
-
-"" Git
-Plug 'airblade/vim-gitgutter'
-Plug 'tommcdo/vim-fubitive' " bitbucket
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-
-" Navigation / Search
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle','NERDTreeFind'] }
-
-"" LSP / Completion Engines
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'neovim/nvim-lspconfig'
-
-" Language
-Plug 'cespare/vim-toml'
-Plug 'dag/vim-fish'
-Plug 'hashivim/vim-terraform'
-Plug 'kchmck/vim-coffee-script'
-Plug 'keith/swift.vim'
-Plug 'kylef/apiblueprint.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'LnL7/vim-nix'
-
-" Layout
-Plug 'nanotech/jellybeans.vim'
-
-call plug#end()
-
 " Leader
 
 let mapleader=" "  " Map <leader> to space
@@ -52,7 +9,7 @@ let mapleader=" "  " Map <leader> to space
 nnoremap <Leader>o :GFiles<cr>
 nnoremap <Leader>O :Files<cr>
 nnoremap <Leader>f :NERDTreeFind<cr>
-nnoremap <Leader>ag :Ag <cword><cr>
+nnoremap <Leader>ag :Ack <cword><cr>
 nnoremap <Leader>b :Buffers<cr>
 
 " Testing
@@ -148,6 +105,9 @@ command! Wc :w !wc
 
 " Syntastic
 let g:syntastic_python_flake8_args="--max-complexity 10"
+
+" ack-vim
+let g:ackprg = 'ag --vimgrep'
 
 " vim-test
 if &term =~ "^screen"
