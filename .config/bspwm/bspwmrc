@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+if [ -x ~/.fehbg ]; then ~/.fehbg; fi
+
 pgrep -x dunst > /dev/null || dunst &
 systemctl --user start polybar.service
 systemctl --user start bspwm.service
