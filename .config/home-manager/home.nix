@@ -104,6 +104,7 @@ in
       typescript-vim
       vim-fish
       vim-flake8
+      vim-gnupg
       vim-ledger
       vim-nix
       vim-terraform
