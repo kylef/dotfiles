@@ -25,6 +25,7 @@ let
     watch
     wget
     whois
+    wol
     zip
   ];
   guiPackages = with pkgs; [
