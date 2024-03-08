@@ -22,7 +22,6 @@ nnoremap <C-p> :tabp<cr>
 nnoremap <C-c> :tabnew<cr>
 
 " Git
-
 nnoremap <Leader>gs :Git status<cr>
 nnoremap <Leader>gc :Git commit<cr>
 nnoremap <Leader>gS :Git commit --amend<cr>

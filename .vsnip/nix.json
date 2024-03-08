@@ -60,5 +60,23 @@
       "  ];",
       "}"
     ]
+  },
+  "maven project": {
+    "prefix": ["sh-maven"],
+    "body": [
+      "{ pkgs ? import <nixpkgs> {} }:",
+      "",
+      "pkgs.mkShell {",
+      "  packages = with pkgs; [",
+      "    graalvm-ce",
+      "    jdt-language-server",
+      "    lombok",
+      "    maven",
+      "  ];",
+      "  shellHook = ''",
+      "    export JAVA_OPTS=\"-javaagent:\\${pkgs.lombok}/share/java/lombok.jar\"",
+      "  '';",
+      "}"
+    ]
   }
 }

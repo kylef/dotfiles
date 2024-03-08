@@ -109,6 +109,7 @@ in
       vim-nix
       vim-terraform
       vim-toml
+      nvim-jdtls
 
       # lsp
       nvim-lspconfig
