@@ -33,7 +33,6 @@ let
     calibre
     dunst
     feh
-    firefox
     font-awesome
     kitty
     ledger
@@ -122,6 +121,23 @@ in
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
   programs.home-manager.enable = true;
+
+  programs.firefox = {
+    enable = true;
+    profiles = {
+      default = {
+        settings = {
+          "browser.startup.homepage" = "https://start.duckduckgo.com";
+          "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+          "browser.newtabpage.activity-stream.feeds.topsites" = false;
+          "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+          "dom.security.https_only_mode" = true;
+          "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+        };
+        search.default = "DuckDuckGo";
+      };
+    };
+  };
 
   programs.fzf = {
     enable = true;
