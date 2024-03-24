@@ -83,6 +83,7 @@ in
       jellybeans-vim
 
       vim-sensible
+      plenary-nvim
 
       # project
       ack-vim
@@ -90,6 +91,7 @@ in
       nerdcommenter
       nerdtree
       tagbar
+      telescope-nvim
       vim-test
       vimux
 
