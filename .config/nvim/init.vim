@@ -11,6 +11,15 @@ lua <<EOF
   require'lspconfig'.pyright.setup{}
   require'lspconfig'.sourcekit.setup{}
   require'lspconfig'.terraformls.setup{}
+  require('lspconfig').yamlls.setup {
+    settings = {
+      yaml = {
+        schemas = {
+          ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "docker-compose.yaml",
+        },
+      },
+    }
+  }
 
   local cmp = require'cmp'
   cmp.setup({

@@ -26,6 +26,7 @@ let
     wget
     whois
     wol
+    yaml-language-server
     zip
   ];
   guiPackages = with pkgs; [
