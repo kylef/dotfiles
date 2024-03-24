@@ -86,6 +86,7 @@ in
       # project
       ack-vim
       fzf-vim
+      nerdcommenter
       nerdtree
       tagbar
       vim-test
