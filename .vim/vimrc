@@ -11,9 +11,6 @@ nnoremap <Leader>O :lua require'telescope.builtin'.find_files{}<cr>
 nnoremap <Leader>g :lua require'telescope.builtin'.live_grep{}<cr>
 nnoremap <Leader>b :lua require'telescope.builtin'.buffers{}<cr>
 
-nnoremap <Leader>r :lua require'telescope.builtin'.lsp_references{}<cr>
-nnoremap <Leader>s :lua require'telescope.builtin'.lsp_document_symbols{}<cr>
-
 nnoremap <Leader>f :NERDTreeFind<cr>
 nnoremap <Leader>ag :Ack <cword><cr>
 
