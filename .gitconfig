@@ -23,6 +23,16 @@
 
 [push]
     default = current
+    useForceIfIncludes = true
+
+[rebase]
+    autoStash = true
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
 
 [hub]
     protocol = https
