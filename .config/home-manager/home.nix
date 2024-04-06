@@ -165,6 +165,8 @@ in
     "super + alt + {Left,Down,Up,Right}" = "bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}";
     "super + Tab" = "bspc desktop -f last";
 
+    "super + grave" = "~/.local/bin/bspc-toggle --class scratch --run \"kitty --class scratch\"";
+
     "XF86MonBrightness{Down,Up}" = "${pkgs.brightnessctl}/bin/brightnessctl set {10%-,+10%}";
     "XF86Audio{Lower,Raise}Volume" = "${pkgs.pamixer}/bin/pamixer -{d,i} 5";
     "XF86AudioMute" = "${pkgs.pamixer}/bin/pamixer -t";

@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+#
+# Toggle hidden on an X11 window
+
+usage() {
+  echo $0 --class CLASS
+}
+
+while [[ "$#" -gt 0 ]]; do
+  if [ "$1" = "--class" ]; then
+    class=$2
+    shift
+  elif [ "$1" = "--run" ]; then
+    # command to run, if no windows are found
+    run=$2
+    shift
+  else
+    echo "Invalid argument $1"
+    exit 1
+  fi
+
+  shift
+done
+
+if [ -z "$class" ]; then
+  usage
+  exit 1
+fi
+
+windows=$(xdotool search --classname $class)
+
+if [ -z "$windows" ]; then
+  if [ -n "$run" ]; then
+    $run &
+    sleep 0.3
+    windows=$(xdotool search --classname $class)
+  fi
+fi
+
+for window in $windows; do
+  bspc node $window --flag hidden -f
+done
+
+wait

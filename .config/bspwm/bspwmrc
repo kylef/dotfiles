@@ -27,3 +27,9 @@ bspc config normal_border_color "#130A20"
 bspc config focused_border_color "#D0996E"
 
 bspc rule -a "firefox:Toolkit" state=floating border=off sticky=on rectangle=600x400+3250+1200
+
+if [[ "$primary_resolution" = "1366x"* ]]; then
+  bspc rule -a scratch sticky=on state=floating hidden=on rectangle=1362x250+0+30
+else
+  bspc rule -a scratch sticky=on state=floating hidden=on
+fi
