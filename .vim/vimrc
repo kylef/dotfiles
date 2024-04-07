@@ -113,6 +113,9 @@ let g:syntastic_python_flake8_args="--max-complexity 10"
 let g:ackprg = 'ag --vimgrep'
 
 " vim-test
+" Override pytest, otherwise it may pick poetry run, which is incompatible
+" with shells like nixos
+let test#python#pytest#executable = 'pytest'
 if &term =~ "^screen"
   let test#strategy = "vimux"
   map <Leader>q :call VimuxCloseRunner()<CR>
