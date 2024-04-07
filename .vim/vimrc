@@ -16,6 +16,7 @@ nnoremap <Leader>ag :Ack <cword><cr>
 
 " Testing
 nnoremap <Leader><CR> :TestNearest<cr>
+autocmd FileType dockerfile nnoremap <buffer> <Leader><CR> :!podman build -f %<cr>
 nnoremap <Leader>t :TestFile<cr>
 nnoremap <Leader>T :TestSuite<cr>
 
