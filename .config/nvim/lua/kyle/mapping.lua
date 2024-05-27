@@ -1,3 +1,10 @@
+local defaults = { noremap = true, silent = true }
+vim.keymap.set('', '<leader>y', '"+y', defaults)
+vim.keymap.set('', '<leader>Y', '"+y$', defaults)
+
+vim.keymap.set('n', '<leader>p', '"+p', defaults)
+vim.keymap.set('n', '<leader>P', '"+P', defaults)
+
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local opts = { buffer = args.buf }
