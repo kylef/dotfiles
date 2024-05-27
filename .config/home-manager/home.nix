@@ -15,7 +15,6 @@ let
     mosh
     oci-cli
     pdsh
-    python3
     ripgrep
     silver-searcher
     sshfs
@@ -28,6 +27,12 @@ let
     wol
     yaml-language-server
     zip
+
+    # python
+    black
+    isort
+    pyright
+    python3
   ];
   guiPackages = with pkgs; [
     brightnessctl
