@@ -74,7 +74,7 @@
       "    maven",
       "  ];",
       "  shellHook = ''",
-      "    export JAVA_OPTS=\"-javaagent:\\${pkgs.lombok}/share/java/lombok.jar\"",
+      "    export JDTLS_JVM_ARGS=\"-javaagent:\\${pkgs.lombok}/share/java/lombok.jar\"",
       "  '';",
       "}"
     ]
