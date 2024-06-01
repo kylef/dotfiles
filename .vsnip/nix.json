@@ -1,4 +1,16 @@
 {
+  "nix shell": {
+    "prefix": ["sh-shell"],
+    "body": [
+      "{ pkgs ? import <nixpkgs> {} }:",
+      "",
+      "pkgs.mkShell {",
+      "  packages = with pkgs; [",
+      "    $0",
+      "  ];",
+      "}"
+    ]
+  },
   "poetry project": {
     "prefix": ["sh-py-poetry"],
     "body": [
