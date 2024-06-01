@@ -5,5 +5,31 @@
       "if __name__ == '__main__':",
       "    ${0:pass}"
     ]
+  },
+  "asyncio server": {
+    "prefix": "asyncserver",
+    "body": [
+      "import asyncio",
+      "",
+      "",
+      "async def handle_connection(reader: asyncio.StreamReader, writer: asyncio.StreamWriter) -> None:",
+      "    while True:",
+      "        line = await reader.readuntil(b'\\r\\n')",
+      "        print(line.strip().decode('utf-8'))",
+      "        writer.write(line)",
+      "        await writer.drain()",
+      "",
+      "",
+      "async def main() -> None:",
+      "    server = await asyncio.start_server(handle_connection, 'localhost', 9000)",
+      "",
+      "    async with server:",
+      "        print('Listening on localhost:9000')",
+      "        await server.serve_forever()",
+      "",
+      "",
+      "if __name__ == '__main__':",
+      "    asyncio.run(main())"
+    ]
   }
 }
