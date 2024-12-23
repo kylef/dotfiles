@@ -1,0 +1,32 @@
+{
+  "main-kong": {
+    "prefix": "main-kong",
+    "body": [
+      "package main",
+      "",
+      "import (",
+      "  \"fmt\"",
+      "  \"os\"",
+      "",
+      "  \"github.com/alecthomas/kong\"",
+      ")",
+      "",
+      "type versionFlag bool",
+      "",
+      "func (d versionFlag) BeforeApply() error {",
+      "\tfmt.Println(\"main 0.1.0\")",
+      "\tos.Exit(0)",
+      "\treturn nil",
+      "}",
+      "",
+      "type Arguments struct {",
+      "\tVersionFlag versionFlag `name:\"version\"`",
+      "}",
+      "",
+      "func main() {",
+      "\tvar arguments Arguments",
+      "\tkong.Parse(&arguments)",
+      "}"
+    ]
+  }
+}
