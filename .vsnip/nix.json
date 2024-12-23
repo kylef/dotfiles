@@ -1,6 +1,6 @@
 {
   "nix shell": {
-    "prefix": ["sh-shell"],
+    "prefix": ["nix-shell"],
     "body": [
       "{ pkgs ? import <nixpkgs> {} }:",
       "",
@@ -11,8 +11,23 @@
       "}"
     ]
   },
-  "poetry project": {
-    "prefix": ["sh-py-poetry"],
+  "python": {
+    "prefix": ["nix-py"],
+    "body": [
+      "{ pkgs ? import <nixpkgs> {} }:",
+      "",
+      "pkgs.mkShell {",
+      "  packages = with pkgs; [",
+      "    python3",
+      "    pyright",
+      "    black",
+      "    isort",
+      "  ];",
+      "}"
+    ]
+  },
+  "python poetry project": {
+    "prefix": ["nix-py-poetry"],
     "body": [
       "{ pkgs ? import <nixpkgs> {} }:",
       "",
@@ -48,7 +63,7 @@
     ]
   },
   "go project": {
-    "prefix": ["sh-golang"],
+    "prefix": ["nix-golang"],
     "body": [
       "{ pkgs ? import <nixpkgs> {} }:",
       "",
@@ -61,7 +76,7 @@
     ]
   },
   "terraform project": {
-    "prefix": ["sh-terraform"],
+    "prefix": ["nix-terraform"],
     "body": [
       "{ pkgs ? import <nixpkgs> {} }:",
       "",
@@ -74,7 +89,7 @@
     ]
   },
   "maven project": {
-    "prefix": ["sh-maven"],
+    "prefix": ["nix-maven"],
     "body": [
       "{ pkgs ? import <nixpkgs> {} }:",
       "",
