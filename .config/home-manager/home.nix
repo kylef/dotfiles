@@ -143,7 +143,7 @@ in
           "dom.security.https_only_mode" = true;
           "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         };
-        search.default = "DuckDuckGo";
+        search.default = "ddg";
       };
     };
   };
