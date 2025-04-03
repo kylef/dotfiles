@@ -21,3 +21,7 @@ venv/
 *.xccheckout
 *.xcscmblueprint
 
+# direnv and nix-shell
+.direnv/
+.envrc
+shell.nix
